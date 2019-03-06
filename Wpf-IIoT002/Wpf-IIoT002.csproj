@@ -63,14 +63,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Classes\Alarm.cs" />
-    <Compile Include="Classes\AlarmMessages.cs" />
-    <Compile Include="Classes\ColorToBrushConverter.cs" />
-    <Compile Include="Classes\kepServerStruct.cs" />
-    <Compile Include="Classes\machineFlag.cs" />
-    <Compile Include="Classes\machines.cs" />
-    <Compile Include="Classes\machinesFlags.cs" />
-    <Compile Include="Classes\SortableBindingList.cs" />
+    <Compile Include="Model\Alarm.cs" />
+    <Compile Include="Model\AlarmMessages.cs" />
+    <Compile Include="ViewModel\ColorToBrushConverter.cs" />
+    <Compile Include="Model\kepServerStruct.cs" />
+    <Compile Include="ViewModel\machineFlag.cs" />
+    <Compile Include="Model\machines.cs" />
+    <Compile Include="ViewModel\machinesFlags.cs" />
+    <Compile Include="ViewModel\SortableBindingList.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

@@ -12,6 +12,11 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Threading;
+using OPCAutomation;
 
 namespace Wpf_IIoT002
 {
@@ -20,6 +25,14 @@ namespace Wpf_IIoT002
     /// </summary>
     public partial class MainWindow : Window
     {
+        kepServerStruct KepServerMain = new kepServerStruct();
+        kepServerStruct KepServerStructDF = new kepServerStruct();
+        kepServerStruct KepServerStructDFAlarm = new kepServerStruct();
+        kepServerStruct KepServerStructSF = new kepServerStruct();
+        kepServerStruct KepServerStructSFAlarm = new kepServerStruct();
+
+        private static CancellationTokenSource cancelTokenSource = new CancellationTokenSource();
+
         public MainWindow()
         {
             InitializeComponent();
