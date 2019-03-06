@@ -5,22 +5,103 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.ComponentModel;
 
 namespace Wpf_IIoT002
 {
-    public class machineFlag
+    public class machineFlag: INotifyPropertyChanged
     {
+        //开机状态位
         private int _machineStartusQuality;
-        private Boolean isMachineStart;
+        public int MachineStartusQuality
+        {
+            get { return _machineStartusQuality; }
+            set
+            {
+                _machineStartusQuality = value;
+                NotifyPropertyChanged("MachineStartusQuality");
+            }
+        }
+        private Boolean _isMachineStart;
+        public Boolean IsMachineStart
+        {
+            get { return _isMachineStart; }
+            set
+            {
+                _isMachineStart = value;
+                NotifyPropertyChanged("IsMachineStart");
+                NotifyPropertyChanged("machineStatus");
+            }
+        }
 
+        //炉子状态位
         private int _furnaceStartusQuality;
-        private Boolean isFurnaceStart;
+        public int FurnaceStartusQuality
+        {
+            get { return _furnaceStartusQuality; }
+            set
+            {
+                _furnaceStartusQuality = value;
+                NotifyPropertyChanged("FurnaceStartusQuality");
+            }
+        }
+        private Boolean _isFurnaceStart;
+        public Boolean IsFurnaceStart
+        {
+            get { return _isFurnaceStart; }
+            set
+            {
+                _isFurnaceStart = value;
+                NotifyPropertyChanged("IsFurnaceStart");
+                NotifyPropertyChanged("furnaceStatus");
+            }
+        }
 
+        //升料机状态位
         private int _literStartusQuality;
-        private Boolean isLiterStart;
+        public int LiterStartusQuality
+        {
+            get { return _literStartusQuality; }
+            set
+            {
+                _literStartusQuality = value;
+                NotifyPropertyChanged("LiterStartusQuality");
+            }
+        }
+        private Boolean _isLiterStart;
+        public Boolean IsLiterStart
+        {
+            get { return _isLiterStart; }
+            set
+            {
+                _isLiterStart = value;
+                NotifyPropertyChanged("IsLiterStart");
+                NotifyPropertyChanged("literStatus");
+            }
+        }
 
+        //报警状态位
         private int _alarmStatusQuality;
-        private Boolean isAlarm;
+        public int AlarmStatusQuality
+        {
+            get { return _alarmStatusQuality; }
+            set
+            {
+                _alarmStatusQuality = value;
+                NotifyPropertyChanged("AlarmStatusQuality");
+            }
+        }
+        private Boolean _isAlarm;
+        public Boolean IsAlarm
+        {
+            get { return _isAlarm; }
+            set
+            {
+                _isAlarm = value;
+                NotifyPropertyChanged("IsAlarm");
+                NotifyPropertyChanged("alarmStatus");
+            }
+        }
 
         private int flareMoldTimeSetting;//烤模时间设定
         private int dippingMaterialTimeSetting;//浸料时间设定
@@ -31,99 +112,58 @@ namespace Wpf_IIoT002
         public int FlareMoldTimeSetting
         {
             get { return flareMoldTimeSetting; }
-            set { flareMoldTimeSetting = value; }
+            set {
+                flareMoldTimeSetting = value;
+                NotifyPropertyChanged("FlareMoldTimeSetting");
+            }
         }
 
         public int DipingMaterialTimeSetting
         {
             get { return dippingMaterialTimeSetting; }
-            set { dippingMaterialTimeSetting = value; }
+            set
+            {
+                dippingMaterialTimeSetting = value;
+                NotifyPropertyChanged("DipingMaterialTimeSetting");
+            }
         }
 
         public int FlareMaterialTimeSetting
         {
             get { return flareMaterialTimeSetting; }
-            set { flareMaterialTimeSetting = value; }
+            set
+            {
+                flareMaterialTimeSetting = value;
+                NotifyPropertyChanged("FlareMaterialTimeSetting");
+            }
         }
 
         public int CoolingTimeSetting
         {
             get { return coolingTimeSetting; }
-            set { coolingTimeSetting = value; }
+            set
+            {
+                coolingTimeSetting = value;
+                NotifyPropertyChanged("CoolingTimeSetting");
+            }
         }
 
         public int BrushOilTimeSetting
         {
             get { return brushOilTimeSetting; }
-            set { brushOilTimeSetting = value; }
+            set
+            {
+                brushOilTimeSetting = value;
+                NotifyPropertyChanged("BrushOilTimeSetting");
+            }
         }
 
 
-
-        public void setIsMachineStart(Boolean isStart)
-        {
-            isMachineStart = isStart;
-        }
-
-        public void setIsFurnaceStart(Boolean isStart)
-        {
-            isFurnaceStart = isStart;
-        }
-
-        public void setLiterStart(Boolean isStart)
-        {
-            isLiterStart = isStart;
-        }
-
-        public void setAlarm(Boolean alarm)
-        {
-            isAlarm = alarm;
-        }
-
-        //机器状态数据质量标志
-        public void setMachineStatusQuality(int quality)
-        {
-            _machineStartusQuality = quality;
-        }
-        public int getMachineStatusQuality()
-        {
-            return _machineStartusQuality;
-        }
-
-        //炉子状态数据质量标志
-        public void setFurnaceStatusQuality(int quality)
-        {
-            _furnaceStartusQuality = quality;
-        }
-        public int getFurnaceStatusQuality()
-        {
-            return _furnaceStartusQuality;
-        }
-
-        //升料机状态数据质量标志
-        public void setLiterStatusQuality(int quality)
-        {
-            _literStartusQuality = quality;
-        }
-        public int getLiterStatusQuality()
-        {
-            return _literStartusQuality;
-        }
-
-        //报警状态数据质量标志
-        public void setAlarmStatusQuality(int quality)
-        {
-            _alarmStatusQuality = quality;
-        }
-        public int getAlarmStatusQuality()
-        {
-            return _alarmStatusQuality;
-        }
 
         //开机
         public int getMachineStart()
         {
-            if (isMachineStart)
+            if (_isMachineStart)
             {
                 return 1;
             }
@@ -136,7 +176,7 @@ namespace Wpf_IIoT002
         //开炉做管
         public int getMaking()
         {
-            if (isMachineStart && isFurnaceStart && isLiterStart)
+            if (_isMachineStart && _isFurnaceStart && _isLiterStart)
             {
                 return 1;
             }
@@ -148,7 +188,7 @@ namespace Wpf_IIoT002
         //开炉空转
         public int getIdling()
         {
-            if (isMachineStart && isFurnaceStart && !isLiterStart)
+            if (_isMachineStart && _isFurnaceStart && !_isLiterStart)
             {
                 return 1;
             }
@@ -161,7 +201,7 @@ namespace Wpf_IIoT002
         //不开炉空转
         public int getIdlingAndFurnaceStop()
         {
-            if (isMachineStart && !isFurnaceStart && !isLiterStart)
+            if (_isMachineStart && !_isFurnaceStart && !_isLiterStart)
             {
                 return 1;
             }
@@ -174,7 +214,7 @@ namespace Wpf_IIoT002
         //停机
         public int getHalting()
         {
-            if (!isMachineStart)
+            if (!_isMachineStart)
             {
                 return 1;
             }
@@ -187,7 +227,7 @@ namespace Wpf_IIoT002
         //报警
         public int getAlarm()
         {
-            if (isAlarm)
+            if (_isAlarm)
             {
                 return 1;
             }
@@ -198,91 +238,103 @@ namespace Wpf_IIoT002
         }
 
 
-        public Color machineStatus()
+        public int machineStatus()
         {
             //机器状态
             if (_machineStartusQuality == 192)
             {
-                if (isMachineStart)
+                if (_isMachineStart)
                 {
-                    if (isFurnaceStart && isLiterStart)
+                    if (_isFurnaceStart && _isLiterStart)
                     {
-                        return Colors.LimeGreen;//机器启动，炉子启动，升料机启动则显示绿色
+                        return 2;//机器启动，炉子启动，升料机启动则显示绿色
                     }
                     else
                     {
-                        return Colors.Orange;//机器启动，炉子或者升料机关闭则显示黄色
+                        return 3;//机器启动，炉子或者升料机关闭则显示黄色
                     }
                 }
                 else
                 {
-                    return Colors.Red;//机器关闭则显示红色
+                    return 1;//机器关闭则显示红色
                 }
             }
             else
             {
-                return Colors.DarkGray;
+                return 0;//掉线则显示灰色
             }
 
         }
 
-        public Color furnaceStatus()
+        public int furnaceStatus()
         {
             //炉子状态
             if (_furnaceStartusQuality == 192)
             {
-                if (isFurnaceStart)
+                if (_isFurnaceStart)
                 {
-                    return Colors.LimeGreen;//炉子开启则显示绿色
+                    return 2;//炉子开启则显示绿色
                 }
                 else
                 {
-                    return Colors.Red;//炉子关闭则显示红色
+                    return 1;//炉子关闭则显示红色
                 }
             }
             else
             {
-                return Colors.DarkGray;
+                return 0;
             }
         }
 
-        public Color literStatus()
+        public int literStatus()
         {
             //升料机状态
             if (_literStartusQuality == 192)
             {
-                if (isLiterStart)
+                if (_isLiterStart)
                 {
-                    return Colors.LimeGreen;//升料机开启则显示绿色
+                    return 2;//升料机开启则显示绿色
                 }
                 else
                 {
-                    return Colors.Red;//升料机关闭则显示红色
+                    return 1;//升料机关闭则显示红色
                 }
             }
             else
             {
-                return Colors.DarkGray;
+                return 0;
             }
         }
 
-        public Color alarmStatus()
+        public int alarmStatus()
         {
             //报警状态
             if (_alarmStatusQuality == 192)
             {
-                if (isAlarm)
+                if (_isAlarm)
                 {
-                    return Colors.Red;//有报警则显示红色
+                    return 1;//有报警则显示红色
                 }
                 else
                 {
-                    return Colors.DarkGray;//无报警则显示绿色
+                    return 2;//无报警则显示绿色
                 }
             }
             else
             {
-                return Colors.DarkGray;
+                return 0;
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        // NotifyPropertyChanged will raise the PropertyChanged event passing the
+        // source property that is being updated.
+        public void NotifyPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
     }

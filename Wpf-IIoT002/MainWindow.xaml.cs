@@ -25,6 +25,7 @@ namespace Wpf_IIoT002
             InitializeComponent();
         }
 
+        #region
         private void ImageDG01_MouseEnter(object sender, MouseEventArgs e)
         {
 
@@ -339,5 +340,6 @@ namespace Wpf_IIoT002
         {
 
         }
+        #endregion
     }
 }
