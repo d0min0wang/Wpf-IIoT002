@@ -65,6 +65,7 @@
     </Compile>
     <Compile Include="Model\Alarm.cs" />
     <Compile Include="Model\AlarmMessages.cs" />
+    <Compile Include="Model\OPCHelper.cs" />
     <Compile Include="ViewModel\ColorToBrushConverter.cs" />
     <Compile Include="Model\kepServerStruct.cs" />
     <Compile Include="ViewModel\machineFlag.cs" />
