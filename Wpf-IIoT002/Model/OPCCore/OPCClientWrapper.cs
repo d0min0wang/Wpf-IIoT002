@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OPCAutomation;
 
-namespace Wpf_IIoT002.Model.OPCCore
+namespace Wpf_IIoT002
 {
     public class OPCClientWrapper
     {
