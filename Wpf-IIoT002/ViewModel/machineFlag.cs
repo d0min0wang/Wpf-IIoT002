@@ -24,7 +24,7 @@ namespace Wpf_IIoT002
             {
                 _isMachineStart = value;
                 //NotifyPropertyChanged("IsMachineStart");
-                NotifyPropertyChanged("machineStatus");
+                NotifyPropertyChanged("MachineStatus");
             }
         }
 
@@ -47,7 +47,7 @@ namespace Wpf_IIoT002
             {
                 _isFurnaceStart = value;
                 //NotifyPropertyChanged("IsFurnaceStart");
-                NotifyPropertyChanged("furnaceStatus");
+                NotifyPropertyChanged("FurnaceStatus");
             }
         }
 
@@ -70,7 +70,7 @@ namespace Wpf_IIoT002
             {
                 _isLiterStart = value;
                 //NotifyPropertyChanged("IsLiterStart");
-                NotifyPropertyChanged("literStatus");
+                NotifyPropertyChanged("LiterStatus");
             }
         }
 
@@ -93,7 +93,7 @@ namespace Wpf_IIoT002
             {
                 _isAlarm = value;
                 //NotifyPropertyChanged("IsAlarm");
-                NotifyPropertyChanged("alarmStatus");
+                NotifyPropertyChanged("AlarmStatus");
             }
         }
 
@@ -232,7 +232,7 @@ namespace Wpf_IIoT002
         }
 
 
-        public int machineStatus()
+        public int MachineStatus()
         {
             //机器状态
             if (_machineStartusQuality == TagQuality.Good)
@@ -260,7 +260,7 @@ namespace Wpf_IIoT002
 
         }
 
-        public int furnaceStatus()
+        public int FurnaceStatus()
         {
             //炉子状态
             if (_furnaceStartusQuality == TagQuality.Good)
@@ -280,7 +280,7 @@ namespace Wpf_IIoT002
             }
         }
 
-        public int literStatus()
+        public int LiterStatus()
         {
             //升料机状态
             if (_literStartusQuality == TagQuality.Good)
@@ -300,7 +300,7 @@ namespace Wpf_IIoT002
             }
         }
 
-        public int alarmStatus()
+        public int AlarmStatus()
         {
             //报警状态
             if (_alarmStatusQuality == TagQuality.Good)

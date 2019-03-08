@@ -1774,7 +1774,8 @@
                             <ColumnDefinition Width="26"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagSR01" Grid.Column="0" Fill="{Binding machineStatus, Converter={StaticResource ColorToBrushConverter}}"  Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagSR01" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}"  
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -1782,7 +1783,8 @@
                             <ColumnDefinition Width="26"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXFurnaceFlagSR01" Grid.Column="0" Fill="{Binding furnaceStatus, Converter={StaticResource ColorToBrushConverter}}" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXFurnaceFlagSR01" Grid.Column="0" Fill="{Binding FurnaceStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
@@ -1790,7 +1792,8 @@
                             <ColumnDefinition Width="26"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXLiterFlagSR01" Grid.Column="0" Fill="{Binding literStatus, Converter={StaticResource ColorToBrushConverter}}" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXLiterFlagSR01" Grid.Column="0" Fill="{Binding LiterStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
@@ -1798,7 +1801,8 @@
                             <ColumnDefinition Width="26"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXAlarmFlagSR01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXAlarmFlagSR01" Grid.Column="0" Fill="DarkGray" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>

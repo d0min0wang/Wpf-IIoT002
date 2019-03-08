@@ -68,7 +68,7 @@ namespace Wpf_IIoT002
                         break;
                 }
             }
-            label184.Text = SR01Flag.furnaceStatus().ToString();
+            label184.Text = SR01Flag.FurnaceStatus().ToString();
         }
 
         #region
