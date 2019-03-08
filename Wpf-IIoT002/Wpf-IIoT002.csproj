@@ -71,12 +71,9 @@
     <Compile Include="Model\OPCCore\TagItem.cs" />
     <Compile Include="Model\OPCCore\TagQuality.cs" />
     <Compile Include="Model\OPCCore\TagTreeNode.cs" />
-    <Compile Include="Model\OPCHelper.cs" />
     <Compile Include="ViewModel\ColorToBrushConverter.cs" />
-    <Compile Include="Model\kepServerStruct.cs" />
     <Compile Include="ViewModel\machineFlag.cs" />
-    <Compile Include="Model\machines.cs" />
-    <Compile Include="ViewModel\machinesFlags.cs" />
+    <Compile Include="Model\machinesFlags.cs" />
     <Compile Include="ViewModel\SortableBindingList.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

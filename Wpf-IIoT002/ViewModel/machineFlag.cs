@@ -319,23 +319,29 @@ namespace Wpf_IIoT002
             }
         }
 
-        public int AlarmStatus()
+        private int _alarmStatus;
+        public int AlarmStatus
         {
+            get { return _alarmStatus; }
             //报警状态
-            if (_alarmStatusQuality == TagQuality.Good)
+            set
             {
-                if (_isAlarm)
+                if (_alarmStatusQuality == TagQuality.Good)
                 {
-                    return 1;//有报警则显示红色
+                    if (_isAlarm)
+                    {
+                        _alarmStatus= 1;//有报警则显示红色
+                    }
+                    else
+                    {
+                        _alarmStatus= 2;//无报警则显示绿色
+                    }
                 }
                 else
                 {
-                    return 2;//无报警则显示绿色
+                    _alarmStatus= 0;
                 }
-            }
-            else
-            {
-                return 0;
+                NotifyPropertyChanged("AlarmStatus");
             }
         }
 

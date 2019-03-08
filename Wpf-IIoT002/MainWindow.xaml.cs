@@ -19,14 +19,14 @@ namespace Wpf_IIoT002
         //初始化客户端
         private OPCClientWrapper opcClient = new OPCClientWrapper();
 
-        machineFlag SR01Flag = new machineFlag();
+        machinesFlags MachinesFlags = new machinesFlags();
 
         private static CancellationTokenSource cancelTokenSource = new CancellationTokenSource();
 
         public MainWindow()
         {
             InitializeComponent();
-            //SR01Status.DataContext = SR01Flag;
+            SR01Status.DataContext = MachinesFlags.SR01Flag;
 
             //opcClient.Init("192.168.0.130", "Kepware.KEPServerEX.V6");
             ////添加点位变化事件回调
@@ -46,25 +46,20 @@ namespace Wpf_IIoT002
                 switch(model.Index)
                 {
                     case 1001:
-                        SR01Flag.MachineStartusQuality = model.Quality;
-                        SR01Flag.IsMachineStart =(Boolean)model.Value;
-                        int temp = SR01Flag.MachineStatus;
+                        MachinesFlags.SR01Flag.MachineStartusQuality = model.Quality;
+                        MachinesFlags.SR01Flag.IsMachineStart =(Boolean)model.Value;
                         break;
                     case 1002:
-                        SR01Flag.FurnaceStartusQuality = model.Quality;
-                        SR01Flag.IsFurnaceStart = (Boolean)model.Value;
-                        int temp1 = SR01Flag.MachineStatus;
-                        temp1 = SR01Flag.FurnaceStatus;
+                        MachinesFlags.SR01Flag.FurnaceStartusQuality = model.Quality;
+                        MachinesFlags.SR01Flag.IsFurnaceStart = (Boolean)model.Value;
                         break;
                     case 1003:
-                        SR01Flag.LiterStartusQuality = model.Quality;
-                        SR01Flag.IsLiterStart = (Boolean)model.Value;
-                        int temp2 = SR01Flag.MachineStatus;
-                        temp2 = SR01Flag.LiterStatus;
+                        MachinesFlags.SR01Flag.LiterStartusQuality = model.Quality;
+                        MachinesFlags.SR01Flag.IsLiterStart = (Boolean)model.Value;
                         break;
                 }
             }
-            label184.Text = SR01Flag.MachineStatus.ToString();
+            label184.Text = MachinesFlags.SR01Flag.MachineStatus.ToString();
         }
 
         #region
