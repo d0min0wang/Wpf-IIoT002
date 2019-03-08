@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Wpf_IIoT002
+﻿namespace Wpf_IIoT002
 {
-    class machinesFlags
+    public class machinesFlags
     {
         //研发二楼车间
         public static machineFlag DG01Flag = new machineFlag();
