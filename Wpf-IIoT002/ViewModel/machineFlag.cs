@@ -23,8 +23,8 @@ namespace Wpf_IIoT002
             set
             {
                 _isMachineStart = value;
-                //NotifyPropertyChanged("IsMachineStart");
-                NotifyPropertyChanged("MachineStatus");
+                int temp = MachineStatus;
+                NotifyPropertyChanged("IsMachineStart");
             }
         }
 
@@ -46,8 +46,9 @@ namespace Wpf_IIoT002
             set
             {
                 _isFurnaceStart = value;
-                //NotifyPropertyChanged("IsFurnaceStart");
-                NotifyPropertyChanged("FurnaceStatus");
+                int temp = MachineStatus;
+                int temp1 = FurnaceStatus;
+                NotifyPropertyChanged("IsFurnaceStart");
             }
         }
 
@@ -69,8 +70,9 @@ namespace Wpf_IIoT002
             set
             {
                 _isLiterStart = value;
-                //NotifyPropertyChanged("IsLiterStart");
-                NotifyPropertyChanged("LiterStatus");
+                int temp = MachineStatus;
+                int temp1 = LiterStatus;
+                NotifyPropertyChanged("IsLiterStart");
             }
         }
 
@@ -231,72 +233,88 @@ namespace Wpf_IIoT002
             }
         }
 
-
-        public int MachineStatus()
+        private int _machineStatus;
+        public int MachineStatus
         {
             //机器状态
-            if (_machineStartusQuality == TagQuality.Good)
+            get { return _machineStatus; }
+            set
             {
-                if (_isMachineStart)
+                if (_machineStartusQuality == TagQuality.Good)
                 {
-                    if (_isFurnaceStart && _isLiterStart)
+                    if (_isMachineStart)
                     {
-                        return 2;//机器启动，炉子启动，升料机启动则显示绿色
+                        if (_isFurnaceStart && _isLiterStart)
+                        {
+                            _machineStatus= 2;//机器启动，炉子启动，升料机启动则显示绿色
+                        }
+                        else
+                        {
+                            _machineStatus= 3;//机器启动，炉子或者升料机关闭则显示黄色
+                        }
                     }
                     else
                     {
-                        return 3;//机器启动，炉子或者升料机关闭则显示黄色
+                        _machineStatus= 1;//机器关闭则显示红色
                     }
                 }
                 else
                 {
-                    return 1;//机器关闭则显示红色
+                    _machineStatus= 0;//掉线则显示灰色
                 }
-            }
-            else
-            {
-                return 0;//掉线则显示灰色
-            }
-
-        }
-
-        public int FurnaceStatus()
-        {
-            //炉子状态
-            if (_furnaceStartusQuality == TagQuality.Good)
-            {
-                if (_isFurnaceStart)
-                {
-                    return 2;//炉子开启则显示绿色
-                }
-                else
-                {
-                    return 1;//炉子关闭则显示红色
-                }
-            }
-            else
-            {
-                return 0;
+                NotifyPropertyChanged("MachineStatus");
             }
         }
 
-        public int LiterStatus()
+        private int _furnaceStatus;
+        public int FurnaceStatus
         {
-            //升料机状态
-            if (_literStartusQuality == TagQuality.Good)
+            get { return _furnaceStatus; }
+            set
             {
-                if (_isLiterStart)
+                //炉子状态
+                if (_furnaceStartusQuality == TagQuality.Good)
                 {
-                    return 2;//升料机开启则显示绿色
+                    if (_isFurnaceStart)
+                    {
+                        _furnaceStatus= 2;//炉子开启则显示绿色
+                    }
+                    else
+                    {
+                        _furnaceStatus= 1;//炉子关闭则显示红色
+                    }
                 }
                 else
                 {
-                    return 1;//升料机关闭则显示红色
+                    _furnaceStatus= 0;
                 }
+                NotifyPropertyChanged("FurnaceStatus");
             }
-            else
+        }
+
+        private int _literStatus;
+        public int LiterStatus
+        {
+            get { return _literStatus; }
+            set
             {
-                return 0;
+                //升料机状态
+                if (_literStartusQuality == TagQuality.Good)
+                {
+                    if (_isLiterStart)
+                    {
+                        _literStatus= 2;//升料机开启则显示绿色
+                    }
+                    else
+                    {
+                        _literStatus= 1;//升料机关闭则显示红色
+                    }
+                }
+                else
+                {
+                    _literStatus= 0;
+                }
+                NotifyPropertyChanged("LiterStatus");
             }
         }
 

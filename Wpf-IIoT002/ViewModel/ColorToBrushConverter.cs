@@ -26,6 +26,13 @@ namespace Wpf_IIoT002
                     brush = new SolidColorBrush(Colors.Orange);
                     break;
             }
+
+            //bool b = (bool)value;
+            //if (b)
+            //    brush = new SolidColorBrush(Colors.LimeGreen);
+            //else
+            //    brush = new SolidColorBrush(Colors.DarkGray);
+
             return brush;
         }
 

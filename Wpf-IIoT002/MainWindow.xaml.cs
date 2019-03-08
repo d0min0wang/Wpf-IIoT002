@@ -57,6 +57,7 @@ namespace Wpf_IIoT002
                     case 1001:
                         SR01Flag.MachineStartusQuality = model.Quality;
                         SR01Flag.IsMachineStart =(Boolean)model.Value;
+                        //int temp = SR01Flag.MachineStatus;
                         break;
                     case 1002:
                         SR01Flag.FurnaceStartusQuality = model.Quality;
@@ -68,7 +69,7 @@ namespace Wpf_IIoT002
                         break;
                 }
             }
-            label184.Text = SR01Flag.FurnaceStatus().ToString();
+            label184.Text = SR01Flag.MachineStatus.ToString();
         }
 
         #region
