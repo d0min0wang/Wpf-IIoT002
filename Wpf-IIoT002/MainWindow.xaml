@@ -134,7 +134,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="0" Margin="6,13">
+                <Grid Grid.Row="0" Margin="6,13" Name="DG01Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -148,7 +148,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagDG01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagDG01" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -190,7 +191,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="0" Margin="6,13">
+                <Grid Grid.Row="0" Margin="6,13" Name="DY03Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -204,7 +205,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagDY03" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagDY03" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -246,7 +248,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="0" Margin="6,13">
+                <Grid Grid.Row="0" Margin="6,13" Name="DY02Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -260,7 +262,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagDY02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagDY02" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -302,7 +305,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="0" Margin="6,13">
+                <Grid Grid.Row="0" Margin="6,13" Name="DY01Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -316,7 +319,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagDY01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagDY01" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -358,7 +362,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="0" Margin="6,13">
+                <Grid Grid.Row="0" Margin="6,13" Name="DE03Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -372,7 +376,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagDE03" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagDE03" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -414,7 +419,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="0" Margin="6,13">
+                <Grid Grid.Row="0" Margin="6,13" Name="DE02Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -428,7 +433,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagDE02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagDE02" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -470,7 +476,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="0" Margin="6,13">
+                <Grid Grid.Row="0" Margin="6,13" Name="DE01Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -484,7 +490,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagDE01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagDE01" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -526,7 +533,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13">
+                <Grid Grid.Row="1" Margin="6,13" Name="SG01Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -540,7 +547,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagSG01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagSG01" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -582,7 +590,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13">
+                <Grid Grid.Row="1" Margin="6,13" Name="SG02Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -596,7 +604,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagSG02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagSG02" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -638,7 +647,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13">
+                <Grid Grid.Row="1" Margin="6,13" Name="SG03Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -652,7 +661,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagSG03" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagSG03" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -694,7 +704,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13">
+                <Grid Grid.Row="1" Margin="6,13" Name="SE11Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -708,7 +718,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagSE11" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagSE11" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -750,7 +761,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13">
+                <Grid Grid.Row="1" Margin="6,13" Name="SE14Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -764,7 +775,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagSE14" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagSE14" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -806,7 +818,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13">
+                <Grid Grid.Row="1" Margin="6,13" Name="SY01Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -820,7 +832,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagSY01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagSY01" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -862,7 +875,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13">
+                <Grid Grid.Row="1" Margin="6,13" Name="SE08Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -876,7 +889,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagSE08" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagSE08" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -918,7 +932,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13">
+                <Grid Grid.Row="1" Margin="6,13" Name="SE07Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -932,7 +946,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagSE07" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagSE07" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -974,7 +989,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13">
+                <Grid Grid.Row="1" Margin="6,13" Name="SE06Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -988,7 +1003,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagSE06" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagSE06" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -1030,7 +1046,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13">
+                <Grid Grid.Row="1" Margin="6,13" Name="SE05Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1044,7 +1060,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagSE05" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagSE05" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -1086,7 +1103,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13">
+                <Grid Grid.Row="1" Margin="6,13" Name="SE04Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1100,7 +1117,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagSE04" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagSE04" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -1142,7 +1160,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13">
+                <Grid Grid.Row="1" Margin="6,13" Name="SE03Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1156,7 +1174,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagSE03" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagSE03" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -1198,7 +1217,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13">
+                <Grid Grid.Row="1" Margin="6,13" Name="SE02Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1212,7 +1231,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagSE02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagSE02" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -1254,7 +1274,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13">
+                <Grid Grid.Row="1" Margin="6,13" Name="SE01Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1268,7 +1288,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagSE01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagSE01" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -1310,7 +1331,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13">
+                <Grid Grid.Row="1" Margin="6,13" Name="DF20Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1324,7 +1345,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagDF20" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagDF20" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -1332,7 +1354,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXFurnaceFlagDF20" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXFurnaceFlagDF20" Grid.Column="0" Fill="{Binding FurnaceStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
@@ -1366,7 +1389,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13">
+                <Grid Grid.Row="1" Margin="6,13" Name="DF18Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1380,7 +1403,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagDF18" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagDF18" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -1388,7 +1412,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXFurnaceFlagDF18" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXFurnaceFlagDF18" Grid.Column="0" Fill="{Binding FurnaceStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
@@ -1422,7 +1447,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13">
+                <Grid Grid.Row="1" Margin="6,13" Name="DE12Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1436,7 +1461,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagDE12" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagDE12" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -1444,7 +1470,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXFurnaceFlagDE12" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXFurnaceFlagDE12" Grid.Column="0" Fill="{Binding FurnaceStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
@@ -1478,7 +1505,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13">
+                <Grid Grid.Row="1" Margin="6,13" Name="DE11Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1492,7 +1519,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagDE11" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagDE11" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -1500,7 +1528,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXFurnaceFlagDE11" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXFurnaceFlagDE11" Grid.Column="0" Fill="{Binding FurnaceStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
@@ -1534,7 +1563,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13">
+                <Grid Grid.Row="1" Margin="6,13" Name="SM02Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1548,7 +1577,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagSM02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagSM02" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -1556,7 +1586,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXFurnaceFlagSM02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXFurnaceFlagSM02" Grid.Column="0" Fill="{Binding FurnaceStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
@@ -1590,7 +1621,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13">
+                <Grid Grid.Row="1" Margin="6,13" Name="SM01Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1604,7 +1635,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagSM01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagSM01" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -1612,7 +1644,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXFurnaceFlagSM01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXFurnaceFlagSM01" Grid.Column="0" Fill="{Binding FurnaceStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
@@ -1646,7 +1679,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13">
+                <Grid Grid.Row="1" Margin="6,13" Name="SE12Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1660,7 +1693,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagSE12" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagSE12" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -1668,7 +1702,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXFurnaceFlagSE12" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXFurnaceFlagSE12" Grid.Column="0" Fill="{Binding FurnaceStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
@@ -1702,7 +1737,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13">
+                <Grid Grid.Row="1" Margin="6,13" Name="SR02Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1716,7 +1751,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagSR02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagSR02" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -1724,7 +1760,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXFurnaceFlagSR02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXFurnaceFlagSR02" Grid.Column="0" Fill="{Binding FurnaceStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
@@ -1772,7 +1809,7 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagSR01" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}"  
+                        <Ellipse Name="buttonXMachineFlagSR01" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
                                  Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
@@ -1818,7 +1855,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13">
+                <Grid Grid.Row="1" Margin="6,13" Name="DF21Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1832,7 +1869,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagDF21" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagDF21" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -1840,7 +1878,8 @@
                             <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXFurnaceFlagDF21" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXFurnaceFlagDF21" Grid.Column="0" Fill="{Binding FurnaceStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
