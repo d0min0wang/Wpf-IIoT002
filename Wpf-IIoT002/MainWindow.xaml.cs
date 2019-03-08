@@ -76,11 +76,12 @@ namespace Wpf_IIoT002
             machineItems MachineItems = new machineItems();
             await Task.Run(() =>
             {
-                foreach (KeyValuePair<string, int> keyValuePair in MachineItems.MachineFlagDict)
+                foreach (KeyValuePair<string, int> keyValuePair in MachineItems.getMachineFlagDict())
                 {
                      opcClient.MonitorOPCItem(keyValuePair.Key, keyValuePair.Value);
                 }
             });
+            MachineItems.Dispose();
             //opcClient.MonitorOPCItem("研发楼一楼车间SR01.#01.状态.机器运行标志", 2901);
             //opcClient.MonitorOPCItem("研发楼一楼车间SR01.#01.状态.炉子电源开关", 2902);
             //opcClient.MonitorOPCItem("研发楼一楼车间SR01.#01.状态.升料机开关", 2903);
