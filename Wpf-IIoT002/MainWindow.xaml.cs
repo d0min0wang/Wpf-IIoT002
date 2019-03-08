@@ -91,27 +91,58 @@ namespace Wpf_IIoT002
             //OPC值变化监视事件处理函数
             foreach (OPCChangeModel model in list)
             {
-                switch(model.Index)
+                //switch(model.Index)
+                //{
+                //    case 2901:
+                //        machinesFlags.SR01Flag.MachineStartusQuality = model.Quality;
+                //        machinesFlags.SR01Flag.IsMachineStart = (Boolean)model.Value;
+                //        break;
+                //    case 2902:
+                //        machinesFlags.SR01Flag.FurnaceStartusQuality = model.Quality;
+                //        machinesFlags.SR01Flag.IsFurnaceStart = (Boolean)model.Value;
+                //        break;
+                //    case 2903:
+                //        machinesFlags.SR01Flag.LiterStartusQuality = model.Quality;
+                //        machinesFlags.SR01Flag.IsLiterStart = (Boolean)model.Value;
+                //        break;
+                //    case 2904:
+                //        machinesFlags.SR01Flag.AlarmStatusQuality = model.Quality;
+                //        machinesFlags.SR01Flag.IsAlarm = (Boolean)model.Value;
+                //        break;
+                //}
+                switch(model.Index/100)
                 {
-                    case 2901:
-                        machinesFlags.SR01Flag.MachineStartusQuality = model.Quality;
-                        machinesFlags.SR01Flag.IsMachineStart = (Boolean)model.Value;
-                        break;
-                    case 2902:
-                        machinesFlags.SR01Flag.FurnaceStartusQuality = model.Quality;
-                        machinesFlags.SR01Flag.IsFurnaceStart = (Boolean)model.Value;
-                        break;
-                    case 2903:
-                        machinesFlags.SR01Flag.LiterStartusQuality = model.Quality;
-                        machinesFlags.SR01Flag.IsLiterStart = (Boolean)model.Value;
-                        break;
-                    case 2904:
-                        machinesFlags.SR01Flag.AlarmStatusQuality = model.Quality;
-                        machinesFlags.SR01Flag.IsAlarm = (Boolean)model.Value;
+                    case 29:
+                        MachineFlagSet(machinesFlags.SR01Flag, model, model.Index);
                         break;
                 }
             }
             //label184.Text = machinesFlags.SR01Flag.MachineStatus.ToString();
+            //MachineFlagSet(machinesFlags.SR01Flag, model);
+        }
+
+        private void MachineFlagSet(machineFlag flag,OPCChangeModel model,int index)
+        {
+            switch (index%100)
+            {
+                //MachineFlagSet(machinesFlags.SR01Flag, model);
+                case 1:
+                    flag.MachineStartusQuality = model.Quality;
+                    flag.IsMachineStart = (Boolean)model.Value;
+                    break;
+                case 2:
+                    flag.FurnaceStartusQuality = model.Quality;
+                    flag.IsFurnaceStart = (Boolean)model.Value;
+                    break;
+                case 3:
+                    flag.LiterStartusQuality = model.Quality;
+                    flag.IsLiterStart = (Boolean)model.Value;
+                    break;
+                case 4:
+                    flag.AlarmStatusQuality = model.Quality;
+                    flag.IsAlarm = (Boolean)model.Value;
+                    break;
+            }
         }
 
         #region Tooltip提示
