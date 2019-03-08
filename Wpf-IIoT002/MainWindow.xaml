@@ -5,16 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_IIoT002"
         mc:Ignorable="d"
-        Title="研发楼车间" Height="1440" Width="2560" MinWidth="2560" MinHeight="1440" Closing="Window_Closing" Icon="Images/icon.png" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        Title="研发楼车间" Height="1080" Width="1920" MinWidth="1920" MinHeight="1080" Closing="Window_Closing" Icon="Images/icon.png" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Window.Resources>
         <local:ColorToBrushConverter x:Key="ColorToBrushConverter"></local:ColorToBrushConverter>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="180"></RowDefinition>
-            <RowDefinition Height="15"></RowDefinition>
-            <RowDefinition Height="1199"></RowDefinition>
-            <RowDefinition Height="15"></RowDefinition>
+            <RowDefinition ></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -26,7 +24,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="600"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition Width="900"></ColumnDefinition>
+                <ColumnDefinition Width="400"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
                 <Grid.RowDefinitions>
@@ -87,13 +85,13 @@
                 <TextBlock Name="labelDateTime" Text="labelDateTime" FontSize="15" Foreground="#FFFFFF" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"></TextBlock>
             </Grid>
         </Grid>
-        <Grid Grid.Row="2"  Margin="10">
+        <Grid Grid.Row="2"  Margin="5">
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
                 <RowDefinition Height="30"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="20"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -108,7 +106,7 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="50"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
@@ -118,25 +116,25 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Rectangle Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="20" Stroke="DarkGray" StrokeThickness="2" Margin="0,10" RadiusX="5" RadiusY="5"></Rectangle>
-            <TextBlock Name="mark21" Text="研发楼二楼车间" FontSize="18" Foreground="DarkGray"  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Top" TextAlignment="Left" Margin="20,25,25,0"/>
-            <Rectangle Grid.Row="0" Grid.RowSpan="3" Grid.Column="12" Grid.ColumnSpan="8" Stroke="DarkGray" StrokeThickness="2" Margin="0,10" RadiusX="5" RadiusY="5"></Rectangle>
-            <TextBlock Name="mark22" Text="研发楼二楼洁净车间" FontSize="18" Foreground="DarkGray"  Grid.Row="0" Grid.Column="12" Grid.ColumnSpan="2" VerticalAlignment="Top" TextAlignment="Left" Margin="20,30,25,0"/>
+            <Rectangle Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="20" Stroke="DarkGray" StrokeThickness="2" Margin="0,3" RadiusX="5" RadiusY="5"></Rectangle>
+            <TextBlock Name="mark21" Text="研发楼二楼车间" FontSize="16" Foreground="DarkGray"  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Top" TextAlignment="Left" Margin="20,5,25,0"/>
+            <Rectangle Grid.Row="0" Grid.RowSpan="3" Grid.Column="12" Grid.ColumnSpan="8" Stroke="DarkGray" StrokeThickness="2" Margin="0,3" RadiusX="5" RadiusY="5"></Rectangle>
+            <TextBlock Name="mark22" Text="研发楼二楼洁净车间" FontSize="16" Foreground="DarkGray"  Grid.Row="0" Grid.Column="12" Grid.ColumnSpan="3" VerticalAlignment="Top" TextAlignment="Left" Margin="20,5,25,0"/>
             <Rectangle Grid.Row="4" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="11" Stroke="DarkGray" StrokeThickness="2" Margin="0,0" RadiusX="5" RadiusY="5"></Rectangle>
-            <TextBlock Name="mark11" Text="研发楼一楼车间" FontSize="18" Foreground="DarkGray"  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Top" TextAlignment="Left" Margin="20,25,25,0"/>
+            <TextBlock Name="mark11" Text="研发楼一楼车间" FontSize="16" Foreground="DarkGray"  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Top" TextAlignment="Left" Margin="20,5,25,0"/>
             <!--DG01界面开始代码段-->
             <Grid Grid.Row="1" Grid.Column="3" Margin="0,0,0,35">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="6*"></RowDefinition>
                     <RowDefinition Height="5*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="0" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="0" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageDG01" Grid.Row="1" Source="Images/大机-灰.png" MouseEnter="ImageDG01_MouseEnter" MouseLeave="ImageDG01_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="0" Margin="15">
+                <Grid Grid.Row="0" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -144,38 +142,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="DG01" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="DG01" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagDG01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagDG01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagDG01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagDG01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -186,13 +184,13 @@
                     <RowDefinition Height="6*"></RowDefinition>
                     <RowDefinition Height="5*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="0" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="0" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageDY03" Grid.Row="1" Source="Images/大机-灰.png" MouseEnter="ImageDY03_MouseEnter" MouseLeave="ImageDY03_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="0" Margin="15">
+                <Grid Grid.Row="0" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -200,38 +198,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="DY03" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="DY03" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagDY03" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagDY03" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagDY03" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagDY03" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -242,13 +240,13 @@
                     <RowDefinition Height="6*"></RowDefinition>
                     <RowDefinition Height="5*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="0" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="0" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageDY02" Grid.Row="1" Source="Images/大机-灰.png" MouseEnter="ImageDY02_MouseEnter" MouseLeave="ImageDY02_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="0" Margin="15">
+                <Grid Grid.Row="0" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -256,38 +254,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="DY02" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="DY02" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagDY02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagDY02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagDY02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagDY02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -298,13 +296,13 @@
                     <RowDefinition Height="6*"></RowDefinition>
                     <RowDefinition Height="5*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="0" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="0" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageDY01" Grid.Row="1" Source="Images/大机-灰.png" MouseEnter="ImageDY01_MouseEnter" MouseLeave="ImageDY01_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="0" Margin="15">
+                <Grid Grid.Row="0" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -312,38 +310,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="DY01" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="DY01" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagDY01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagDY01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagDY01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagDY01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -354,13 +352,13 @@
                     <RowDefinition Height="6*"></RowDefinition>
                     <RowDefinition Height="5*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="0" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="0" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageDE03" Grid.Row="1" Source="Images/大机-灰.png" MouseEnter="ImageDE03_MouseEnter" MouseLeave="ImageDE03_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="0" Margin="15">
+                <Grid Grid.Row="0" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -368,38 +366,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="DE03" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="DE03" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagDE03" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagDE03" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagDE03" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagDE03" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -410,13 +408,13 @@
                     <RowDefinition Height="6*"></RowDefinition>
                     <RowDefinition Height="5*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="0" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="0" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageDE02" Grid.Row="1" Source="Images/大机-灰.png" MouseEnter="ImageDE02_MouseEnter" MouseLeave="ImageDE02_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="0" Margin="15">
+                <Grid Grid.Row="0" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -424,38 +422,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="DE02" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="DE02" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagDE02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagDE02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagDE02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagDE02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -466,13 +464,13 @@
                     <RowDefinition Height="6*"></RowDefinition>
                     <RowDefinition Height="5*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="0" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="0" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageDE01" Grid.Row="1" Source="Images/大机-灰.png" MouseEnter="ImageDE01_MouseEnter" MouseLeave="ImageDE01_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="0" Margin="15">
+                <Grid Grid.Row="0" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -480,38 +478,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="DE01" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="DE01" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagDE01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagDE01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagDE01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagDE01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -522,13 +520,13 @@
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageSG01" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSG01_MouseEnter" MouseLeave="ImageSG01_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -536,38 +534,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="SG01" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="SG01" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagSG01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagSG01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagSG01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagSG01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -578,13 +576,13 @@
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageSG02" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSG02_MouseEnter" MouseLeave="ImageSG02_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -592,38 +590,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="SG02" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="SG02" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagSG02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagSG02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagSG02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagSG02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -634,13 +632,13 @@
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageSG03" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSG03_MouseEnter" MouseLeave="ImageSG03_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -648,38 +646,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="SG03" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="SG03" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagSG03" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagSG03" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagSG03" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagSG03" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -690,13 +688,13 @@
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageSE11" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE11_MouseEnter" MouseLeave="ImageSE11_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -704,38 +702,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="SE11" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="SE11" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagSE11" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagSE11" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagSE11" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagSE11" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -746,13 +744,13 @@
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageSE" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE14_MouseEnter" MouseLeave="ImageSE14_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -760,38 +758,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="SE14" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="SE14" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagSE14" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagSE14" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagSE14" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagSE14" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -802,13 +800,13 @@
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageSY01" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSY01_MouseEnter" MouseLeave="ImageSY01_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -816,38 +814,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="SY01" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="SY01" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagSY01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagSY01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagSY01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagSY01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -858,13 +856,13 @@
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageSE08" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE08_MouseEnter" MouseLeave="ImageSE08_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -872,38 +870,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="SE08" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="SE08" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagSE08" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagSE08" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagSE08" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagSE08" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -914,13 +912,13 @@
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageSE07" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE07_MouseEnter" MouseLeave="ImageSE07_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -928,38 +926,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="SE07" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="SE07" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagSE07" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagSE07" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagSE07" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagSE07" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -970,13 +968,13 @@
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageSE06" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE06_MouseEnter" MouseLeave="ImageSE06_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -984,38 +982,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="SE06" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="SE06" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagSE06" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagSE06" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagSE06" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagSE06" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -1026,13 +1024,13 @@
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageSE05" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE05_MouseEnter" MouseLeave="ImageSE05_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1040,38 +1038,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="SE05" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="SE05" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagSE05" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagSE05" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagSE05" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagSE05" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -1082,13 +1080,13 @@
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageSE04" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE04_MouseEnter" MouseLeave="ImageSE04_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1096,38 +1094,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="SE04" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="SE04" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagSE04" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagSE04" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagSE04" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagSE04" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -1138,13 +1136,13 @@
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageSE03" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE03_MouseEnter" MouseLeave="ImageSE03_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1152,38 +1150,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="SE03" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="SE03" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagSE03" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagSE03" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagSE03" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagSE03" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -1194,13 +1192,13 @@
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageSE02" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE02_MouseEnter" MouseLeave="ImageSE02_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1208,38 +1206,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="SE02" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="SE02" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagSE02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagSE02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagSE02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagSE02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -1250,13 +1248,13 @@
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageSE01" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE01_MouseEnter" MouseLeave="ImageSE01_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1264,38 +1262,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="SE01" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="SE01" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagSE01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagSE01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagSE01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagSE01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -1306,13 +1304,13 @@
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageDF20" Grid.Row="0" Source="Images/大机-灰.png" MouseEnter="ImageDF20_MouseEnter" MouseLeave="ImageDF20_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1320,38 +1318,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="DF20" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="DF20" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagDF20" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagDF20" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagDF20" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagDF20" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -1362,13 +1360,13 @@
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageDF18" Grid.Row="0" Source="Images/大机-灰.png" MouseEnter="ImageDF18_MouseEnter" MouseLeave="ImageDF18_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1376,38 +1374,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="DF18" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="DF18" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagDF18" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagDF18" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagDF18" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagDF18" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -1418,13 +1416,13 @@
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageDE12" Grid.Row="0" Source="Images/大机-灰.png" MouseEnter="ImageDE12_MouseEnter" MouseLeave="ImageDE12_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1432,38 +1430,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="DE12" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="DE12" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagDE12" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagDE12" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagDE12" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagDE12" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -1474,13 +1472,13 @@
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageDE11" Grid.Row="0" Source="Images/大机-灰.png" MouseEnter="ImageDE11_MouseEnter" MouseLeave="ImageDE11_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1488,38 +1486,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="DE11" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="DE11" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagDE11" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagDE11" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagDE11" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagDE11" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -1530,13 +1528,13 @@
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageSM02" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSM02_MouseEnter" MouseLeave="ImageSM02_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1544,38 +1542,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="SM02" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="SM02" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagSM02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagSM02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagSM02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagSM02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -1586,13 +1584,13 @@
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageSM01" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSM01_MouseEnter" MouseLeave="ImageSM01_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1600,38 +1598,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="SM01" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="SM01" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagSM01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagSM01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagSM01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagSM01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -1642,13 +1640,13 @@
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageSE12" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE12_MouseEnter" MouseLeave="ImageSE12_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1656,38 +1654,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="SE12" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="SE12" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagSE12" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagSE12" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagSE12" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagSE12" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -1698,13 +1696,13 @@
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageSR02" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSR02_MouseEnter" MouseLeave="ImageSR02_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1712,38 +1710,38 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="SR02" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="SR02" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagSR02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagSR02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagSR02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagSR02" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -1754,13 +1752,13 @@
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageSR01" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSR01_MouseEnter" MouseLeave="ImageSR01_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15" Name="SR01Status">
+                <Grid Grid.Row="1" Margin="6,13" Name="SR01Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1768,42 +1766,42 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="SR01" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="SR01" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagSR01" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}"  
                                  Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagSR01" Grid.Column="0" Fill="{Binding FurnaceStatus, Converter={StaticResource ColorToBrushConverter}}" 
                                  Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagSR01" Grid.Column="0" Fill="{Binding LiterStatus, Converter={StaticResource ColorToBrushConverter}}" 
                                  Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagSR01" Grid.Column="0" Fill="DarkGray" 
                                  Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
@@ -1814,13 +1812,13 @@
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="10,12" RadiusX="5" RadiusY="5"></Rectangle>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
                 <Image x:Name="ImageDF21" Grid.Row="0" Source="Images/大机-灰.png" MouseEnter="ImageDF21_MouseEnter" MouseLeave="ImageDF21_MouseLeave">
                     <Image.ToolTip>
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1828,44 +1826,44 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="DF21" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Row="0" Text="DF21" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXMachineFlagDF21" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXFurnaceFlagDF21" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXLiterFlagDF21" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="26"></ColumnDefinition>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Ellipse Name="buttonXAlarmFlagDF21" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
-                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                 </Grid>
             </Grid>
             <!--DF21界面完-->
             <TextBlock Name="labelServerStatus" Text="labelServerStatus" FontSize="15" Foreground="DarkGray"  Grid.Row="5" Grid.Column="11" Grid.ColumnSpan="2" VerticalAlignment="Bottom" TextAlignment="Right" Margin="0,0,10,10"/>
-            <TextBlock Name="label184" Text="label184" FontSize="13" Foreground="DarkGray"  Grid.Row="4" Grid.Column="11" Grid.ColumnSpan="2" VerticalAlignment="Top" TextAlignment="Right" Margin="0,10,10,0"/>
+            <TextBlock Name="label184" Text="label184" FontSize="11" Foreground="DarkGray"  Grid.Row="4" Grid.Column="11" Grid.ColumnSpan="2" VerticalAlignment="Top" TextAlignment="Right" Margin="0,10,10,0"/>
             <DataGrid Name="dataGridViewAlarmMessage" Grid.Row="4" Grid.RowSpan="2" Grid.Column="13" Grid.ColumnSpan="7" BorderThickness="1" Margin="10" 
                       FontSize="14" AutoGenerateColumns="False" GridLinesVisibility="None" BorderBrush="DarkGray" IsReadOnly="True" RowHeaderWidth="0">
                 <DataGrid.Background>

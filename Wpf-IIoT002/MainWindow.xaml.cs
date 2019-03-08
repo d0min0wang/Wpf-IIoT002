@@ -26,24 +26,15 @@ namespace Wpf_IIoT002
         public MainWindow()
         {
             InitializeComponent();
-            SR01Status.DataContext = SR01Flag;
-            //string strIP;
-            //strIP = "192.168.0.130";
-            //oPCHelper = new OPCHelper(strIP, "Kepware.KEPServerEX.V6", 100);
-            //oPCHelper.AddItems( new string[] 
-            //{ "研发楼一楼车间SR01.#01.状态.机器运行标志",
-            //"研发楼一楼车间SR01.#01.状态.炉子电源开关",
-            //"研发楼一楼车间SR01.#01.状态.升料机开关", 
-            //"研发楼一楼车间SR01.#01.报警信息.报警提示"
-            //    });
+            //SR01Status.DataContext = SR01Flag;
 
-            opcClient.Init("192.168.0.130", "Kepware.KEPServerEX.V6");
-            //添加点位变化事件回调
-            opcClient.OpcDataChangedEvent += new OPCDataChangedHandler(OpcClient_OpcDataChangedEvent);
-            //添加监视点位
-            opcClient.MonitorOPCItem("研发楼一楼车间SR01.#01.状态.机器运行标志",1001);
-            opcClient.MonitorOPCItem("研发楼一楼车间SR01.#01.状态.炉子电源开关", 1002);
-            opcClient.MonitorOPCItem("研发楼一楼车间SR01.#01.状态.升料机开关", 1003);
+            //opcClient.Init("192.168.0.130", "Kepware.KEPServerEX.V6");
+            ////添加点位变化事件回调
+            //opcClient.OpcDataChangedEvent += new OPCDataChangedHandler(OpcClient_OpcDataChangedEvent);
+            ////添加监视点位
+            //opcClient.MonitorOPCItem("研发楼一楼车间SR01.#01.状态.机器运行标志",1001);
+            //opcClient.MonitorOPCItem("研发楼一楼车间SR01.#01.状态.炉子电源开关", 1002);
+            //opcClient.MonitorOPCItem("研发楼一楼车间SR01.#01.状态.升料机开关", 1003);
 
         }
 
