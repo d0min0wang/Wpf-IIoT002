@@ -57,15 +57,19 @@ namespace Wpf_IIoT002
                     case 1001:
                         SR01Flag.MachineStartusQuality = model.Quality;
                         SR01Flag.IsMachineStart =(Boolean)model.Value;
-                        //int temp = SR01Flag.MachineStatus;
+                        int temp = SR01Flag.MachineStatus;
                         break;
                     case 1002:
                         SR01Flag.FurnaceStartusQuality = model.Quality;
                         SR01Flag.IsFurnaceStart = (Boolean)model.Value;
+                        int temp1 = SR01Flag.MachineStatus;
+                        temp1 = SR01Flag.FurnaceStatus;
                         break;
                     case 1003:
                         SR01Flag.LiterStartusQuality = model.Quality;
                         SR01Flag.IsLiterStart = (Boolean)model.Value;
+                        int temp2 = SR01Flag.MachineStatus;
+                        temp2 = SR01Flag.LiterStatus;
                         break;
                 }
             }

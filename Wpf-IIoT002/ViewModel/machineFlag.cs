@@ -13,6 +13,7 @@ namespace Wpf_IIoT002
             set
             {
                 _machineStartusQuality = value;
+                //int temp = MachineStatus;
                 NotifyPropertyChanged("MachineStartusQuality");
             }
         }
@@ -23,7 +24,7 @@ namespace Wpf_IIoT002
             set
             {
                 _isMachineStart = value;
-                int temp = MachineStatus;
+                MachineStatus=Convert.ToInt32(value);
                 NotifyPropertyChanged("IsMachineStart");
             }
         }
@@ -46,8 +47,8 @@ namespace Wpf_IIoT002
             set
             {
                 _isFurnaceStart = value;
-                int temp = MachineStatus;
-                int temp1 = FurnaceStatus;
+                MachineStatus = Convert.ToInt32(value);
+                FurnaceStatus = Convert.ToInt32(value);
                 NotifyPropertyChanged("IsFurnaceStart");
             }
         }
@@ -70,8 +71,8 @@ namespace Wpf_IIoT002
             set
             {
                 _isLiterStart = value;
-                int temp = MachineStatus;
-                int temp1 = LiterStatus;
+                MachineStatus = Convert.ToInt32(value);
+                LiterStatus = Convert.ToInt32(value);
                 NotifyPropertyChanged("IsLiterStart");
             }
         }
