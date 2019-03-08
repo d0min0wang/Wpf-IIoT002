@@ -15,24 +15,61 @@ namespace Wpf_IIoT002
     /// </summary>
     public partial class MainWindow : Window
     {
-        OPCHelper oPCHelper;
+        //OPCHelper oPCHelper;
+        //初始化客户端
+        private OPCClientWrapper opcClient = new OPCClientWrapper();
+
+        machineFlag SR01Flag = new machineFlag();
+
         private static CancellationTokenSource cancelTokenSource = new CancellationTokenSource();
 
         public MainWindow()
         {
             InitializeComponent();
-            string strIP;
-            strIP = "192.168.0.130";
-            oPCHelper = new OPCHelper(strIP, "Kepware.KEPServerEX.V6", 100);
-            oPCHelper.AddItems( new string[] 
-            { "研发楼一楼车间SR01.#01.状态.机器运行标志",
-            "研发楼一楼车间SR01.#01.状态.炉子电源开关",
-            "研发楼一楼车间SR01.#01.状态.升料机开关", 
-            "研发楼一楼车间SR01.#01.报警信息.报警提示"
-                });
+            SR01Status.DataContext = SR01Flag;
+            //string strIP;
+            //strIP = "192.168.0.130";
+            //oPCHelper = new OPCHelper(strIP, "Kepware.KEPServerEX.V6", 100);
+            //oPCHelper.AddItems( new string[] 
+            //{ "研发楼一楼车间SR01.#01.状态.机器运行标志",
+            //"研发楼一楼车间SR01.#01.状态.炉子电源开关",
+            //"研发楼一楼车间SR01.#01.状态.升料机开关", 
+            //"研发楼一楼车间SR01.#01.报警信息.报警提示"
+            //    });
+
+            opcClient.Init("192.168.0.130", "Kepware.KEPServerEX.V6");
+            //添加点位变化事件回调
+            opcClient.OpcDataChangedEvent += new OPCDataChangedHandler(OpcClient_OpcDataChangedEvent);
+            //添加监视点位
+            opcClient.MonitorOPCItem("研发楼一楼车间SR01.#01.状态.机器运行标志",1001);
+            opcClient.MonitorOPCItem("研发楼一楼车间SR01.#01.状态.炉子电源开关", 1002);
+            opcClient.MonitorOPCItem("研发楼一楼车间SR01.#01.状态.升料机开关", 1003);
+
         }
 
-
+        private void OpcClient_OpcDataChangedEvent(List<OPCChangeModel> list)
+        {
+            //OPC值变化监视事件处理函数
+            foreach (OPCChangeModel model in list)
+            {
+                switch(model.Index)
+                {
+                    case 1001:
+                        SR01Flag.MachineStartusQuality = model.Quality;
+                        SR01Flag.IsMachineStart =(Boolean)model.Value;
+                        break;
+                    case 1002:
+                        SR01Flag.FurnaceStartusQuality = model.Quality;
+                        SR01Flag.IsFurnaceStart = (Boolean)model.Value;
+                        break;
+                    case 1003:
+                        SR01Flag.LiterStartusQuality = model.Quality;
+                        SR01Flag.IsLiterStart = (Boolean)model.Value;
+                        break;
+                }
+            }
+            label184.Text = SR01Flag.furnaceStatus().ToString();
+        }
 
         #region
         private void ImageDG01_MouseEnter(object sender, MouseEventArgs e)
@@ -349,7 +386,8 @@ namespace Wpf_IIoT002
         private void Window_Closing(object sender, CancelEventArgs e)
         {
             cancelTokenSource.Cancel();
-            oPCHelper.Dispose();
+            //oPCHelper.Dispose();
+            opcClient.Disconnect();
         }
     }
 }

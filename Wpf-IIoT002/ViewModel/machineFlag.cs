@@ -6,8 +6,8 @@ namespace Wpf_IIoT002
     public class machineFlag: INotifyPropertyChanged
     {
         //开机状态位
-        private int _machineStartusQuality;
-        public int MachineStartusQuality
+        private TagQuality _machineStartusQuality;
+        public TagQuality MachineStartusQuality
         {
             get { return _machineStartusQuality; }
             set
@@ -23,14 +23,14 @@ namespace Wpf_IIoT002
             set
             {
                 _isMachineStart = value;
-                NotifyPropertyChanged("IsMachineStart");
+                //NotifyPropertyChanged("IsMachineStart");
                 NotifyPropertyChanged("machineStatus");
             }
         }
 
         //炉子状态位
-        private int _furnaceStartusQuality;
-        public int FurnaceStartusQuality
+        private TagQuality _furnaceStartusQuality;
+        public TagQuality FurnaceStartusQuality
         {
             get { return _furnaceStartusQuality; }
             set
@@ -46,14 +46,14 @@ namespace Wpf_IIoT002
             set
             {
                 _isFurnaceStart = value;
-                NotifyPropertyChanged("IsFurnaceStart");
+                //NotifyPropertyChanged("IsFurnaceStart");
                 NotifyPropertyChanged("furnaceStatus");
             }
         }
 
         //升料机状态位
-        private int _literStartusQuality;
-        public int LiterStartusQuality
+        private TagQuality _literStartusQuality;
+        public TagQuality LiterStartusQuality
         {
             get { return _literStartusQuality; }
             set
@@ -69,14 +69,14 @@ namespace Wpf_IIoT002
             set
             {
                 _isLiterStart = value;
-                NotifyPropertyChanged("IsLiterStart");
+                //NotifyPropertyChanged("IsLiterStart");
                 NotifyPropertyChanged("literStatus");
             }
         }
 
         //报警状态位
-        private int _alarmStatusQuality;
-        public int AlarmStatusQuality
+        private TagQuality _alarmStatusQuality;
+        public TagQuality AlarmStatusQuality
         {
             get { return _alarmStatusQuality; }
             set
@@ -92,7 +92,7 @@ namespace Wpf_IIoT002
             set
             {
                 _isAlarm = value;
-                NotifyPropertyChanged("IsAlarm");
+                //NotifyPropertyChanged("IsAlarm");
                 NotifyPropertyChanged("alarmStatus");
             }
         }
@@ -235,7 +235,7 @@ namespace Wpf_IIoT002
         public int machineStatus()
         {
             //机器状态
-            if (_machineStartusQuality == 192)
+            if (_machineStartusQuality == TagQuality.Good)
             {
                 if (_isMachineStart)
                 {
@@ -263,7 +263,7 @@ namespace Wpf_IIoT002
         public int furnaceStatus()
         {
             //炉子状态
-            if (_furnaceStartusQuality == 192)
+            if (_furnaceStartusQuality == TagQuality.Good)
             {
                 if (_isFurnaceStart)
                 {
@@ -283,7 +283,7 @@ namespace Wpf_IIoT002
         public int literStatus()
         {
             //升料机状态
-            if (_literStartusQuality == 192)
+            if (_literStartusQuality == TagQuality.Good)
             {
                 if (_isLiterStart)
                 {
@@ -303,7 +303,7 @@ namespace Wpf_IIoT002
         public int alarmStatus()
         {
             //报警状态
-            if (_alarmStatusQuality == 192)
+            if (_alarmStatusQuality == TagQuality.Good)
             {
                 if (_isAlarm)
                 {

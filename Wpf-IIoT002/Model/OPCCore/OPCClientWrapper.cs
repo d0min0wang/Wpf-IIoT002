@@ -159,7 +159,8 @@ namespace Wpf_IIoT002
                 {
                     list.Add(new OPCChangeModel()
                     {
-                        Name = this.clientNameList[(int)ClientHandles.GetValue(i)],
+                        Index = Convert.ToInt32(ClientHandles.GetValue(i)),
+                        //Name = this.clientNameList[(int)ClientHandles.GetValue(i)],
                         Value = ItemValues.GetValue(i),
                         Quality = (TagQuality)Qualities.GetValue(i),
                         TimeStamp = (DateTime)TimeStamps.GetValue(i),
@@ -283,6 +284,45 @@ namespace Wpf_IIoT002
         /// 监视标签
         /// </summary>
         /// <param name="itemName"></param>
+        /// <param name="itemIndex"></param>
+        public void MonitorOPCItem(string itemName,int itemIndex)
+        {
+            try
+            {
+                if (!this.clientHandleDict.ContainsKey(itemName))
+                {
+                    //var bro = this.opcServer.CreateBrowser();
+                    //bro.ShowBranches();
+                    //foreach (var branch in bro)
+                    //{
+                    //    Console.WriteLine(branch.ToString());
+                    //}
+
+                    var index = this.clientNameList.Count;
+                    OPCAutomation.OPCItem tempItem = opcAGroup.OPCItems.AddItem(itemName, itemIndex);
+                    TagItem item = new TagItem()
+                    {
+                        Name = itemName,
+                        //ClientHandler = index,
+                        ClientHandler=itemIndex,
+                        ServerHandler = tempItem.ServerHandle,
+                    };
+                    this.clientNameList.Add(itemName);
+                    this.clientHandleDict.Add(itemName, item);
+                    object value, timeStamp, quality;
+                    tempItem.Read(1, out value, out quality, out timeStamp);
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
+        /// <summary>
+        /// 监视标签重载
+        /// </summary>
+        /// <param name="itemName"></param>
         public void MonitorOPCItem(string itemName)
         {
             try
@@ -302,6 +342,7 @@ namespace Wpf_IIoT002
                     {
                         Name = itemName,
                         ClientHandler = index,
+                        //ClientHandler = itemIndex,
                         ServerHandler = tempItem.ServerHandle,
                     };
                     this.clientNameList.Add(itemName);

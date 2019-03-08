@@ -8,26 +8,26 @@ namespace Wpf_IIoT002
 {
     class TagItem
     {
-        private string name;
+        private string _name;
 
         public string Name
         {
-            get { return name; }
-            set { name = value; }
+            get { return _name; }
+            set { _name = value; }
         }
-        private int serverHandler;
+        private int _serverHandler;
 
         public int ServerHandler
         {
-            get { return serverHandler; }
-            set { serverHandler = value; }
+            get { return _serverHandler; }
+            set { _serverHandler = value; }
         }
-        private int clientHandler;
+        private int _clientHandler;
 
         public int ClientHandler
         {
-            get { return clientHandler; }
-            set { clientHandler = value; }
+            get { return _clientHandler; }
+            set { _clientHandler = value; }
         }
     }
 }

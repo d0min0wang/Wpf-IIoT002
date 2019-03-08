@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:Wpf_IIoT002"
         mc:Ignorable="d"
         Title="研发楼车间" Height="1440" Width="2560" MinWidth="2560" MinHeight="1440" Closing="Window_Closing" Icon="Images/icon.png" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Window.Resources>
+        <local:ColorToBrushConverter x:Key="ColorToBrushConverter"></local:ColorToBrushConverter>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="180"></RowDefinition>
@@ -1757,7 +1760,7 @@
                         <TextBlock Text="{Binding}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="15">
+                <Grid Grid.Row="1" Margin="15" Name="SR01Status">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1771,7 +1774,7 @@
                             <ColumnDefinition Width="26"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXMachineFlagSR01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXMachineFlagSR01" Grid.Column="0" Fill="{Binding machineStatus, Converter={StaticResource ColorToBrushConverter}}"  Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="2">
@@ -1779,7 +1782,7 @@
                             <ColumnDefinition Width="26"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXFurnaceFlagSR01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXFurnaceFlagSR01" Grid.Column="0" Fill="{Binding furnaceStatus, Converter={StaticResource ColorToBrushConverter}}" Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="开炉状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="3">
@@ -1787,7 +1790,7 @@
                             <ColumnDefinition Width="26"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Name="buttonXLiterFlagSR01" Grid.Column="0" Fill="DarkGray" Height="13" Width="13" ></Ellipse>
+                        <Ellipse Name="buttonXLiterFlagSR01" Grid.Column="0" Fill="{Binding literStatus, Converter={StaticResource ColorToBrushConverter}}" Height="13" Width="13" ></Ellipse>
                         <TextBlock Grid.Column="1" Text="升料机状态" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">

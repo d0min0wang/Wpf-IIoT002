@@ -8,6 +8,6 @@ namespace Wpf_IIoT002
 {
     class machinesFlags
     {
-        machineFlag SR01Flag = new machineFlag();
+        public machineFlag SR01Flag = new machineFlag();
     }
 }
