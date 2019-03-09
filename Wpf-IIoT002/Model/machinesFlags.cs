@@ -10,8 +10,9 @@
         public static machineFlag SG01Flag = new machineFlag();
         public static machineFlag SG02Flag = new machineFlag();
         public static machineFlag SG03Flag = new machineFlag();
-        public static machineFlag SE11Flag = new machineFlag();
         public static machineFlag SE14Flag = new machineFlag();
+        public static machineFlag SE12Flag = new machineFlag();
+        public static machineFlag SE11Flag = new machineFlag();
         public static machineFlag SY01Flag = new machineFlag();
         //研发二楼洁净车间
         public static machineFlag DE03Flag = new machineFlag();
@@ -32,7 +33,6 @@
         public static machineFlag DE11Flag = new machineFlag();
         public static machineFlag SM02Flag = new machineFlag();
         public static machineFlag SM01Flag = new machineFlag();
-        public static machineFlag SE12Flag = new machineFlag();
         public static machineFlag SR02Flag = new machineFlag();
         public static machineFlag SR01Flag = new machineFlag();
         public static machineFlag DF21Flag = new machineFlag();

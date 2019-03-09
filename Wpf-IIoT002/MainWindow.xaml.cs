@@ -142,71 +142,71 @@ namespace Wpf_IIoT002
                         break;
                     case 6:
                         MachineFlagSet(machinesFlags.SG03Flag, model, model.Index);
-                        break;
+                        break;                    
                     case 7:
-                        MachineFlagSet(machinesFlags.SE11Flag, model, model.Index);
-                        break;
-                    case 8:
                         MachineFlagSet(machinesFlags.SE14Flag, model, model.Index);
                         break;
+                    case 8:
+                        MachineFlagSet(machinesFlags.SE12Flag, model, model.Index);
+                        break;
                     case 9:
+                        MachineFlagSet(machinesFlags.SE11Flag, model, model.Index);
+                        break;
+                    case 10:
                         MachineFlagSet(machinesFlags.SY01Flag, model, model.Index);
                         break;
                     //研发二楼洁净车间
-                    case 10:
+                    case 11:
                         MachineFlagSet(machinesFlags.DE03Flag, model, model.Index);
                         break;
-                    case 11:
+                    case 12:
                         MachineFlagSet(machinesFlags.DE02Flag, model, model.Index);
                         break;
-                    case 12:
+                    case 13:
                         MachineFlagSet(machinesFlags.DE01Flag, model, model.Index);
                         break;
-                    case 13:
+                    case 14:
                         MachineFlagSet(machinesFlags.SE08Flag, model, model.Index);
                         break;
-                    case 14:
+                    case 15:
                         MachineFlagSet(machinesFlags.SE07Flag, model, model.Index);
                         break;
-                    case 15:
+                    case 16:
                         MachineFlagSet(machinesFlags.SE06Flag, model, model.Index);
                         break;
-                    case 16:
+                    case 17:
                         MachineFlagSet(machinesFlags.SE05Flag, model, model.Index);
                         break;
-                    case 17:
+                    case 18:
                         MachineFlagSet(machinesFlags.SE04Flag, model, model.Index);
                         break;
-                    case 18:
+                    case 19:
                         MachineFlagSet(machinesFlags.SE03Flag, model, model.Index);
                         break;
-                    case 19:
+                    case 20:
                         MachineFlagSet(machinesFlags.SE02Flag, model, model.Index);
                         break;
-                    case 20:
+                    case 21:
                         MachineFlagSet(machinesFlags.SE01Flag, model, model.Index);
                         break;
                     //研发一楼车间
-                    case 21:
+                    case 22:
                         MachineFlagSet(machinesFlags.DF20Flag, model, model.Index);
                         break;
-                    case 22:
+                    case 23:
                         MachineFlagSet(machinesFlags.DF18Flag, model, model.Index);
                         break;
-                    case 23:
+                    case 24:
                         MachineFlagSet(machinesFlags.DE12Flag, model, model.Index);
                         break;
-                    case 24:
+                    case 25:
                         MachineFlagSet(machinesFlags.DE11Flag, model, model.Index);
                         break;
-                    case 25:
+                    case 26:
                         MachineFlagSet(machinesFlags.SM02Flag, model, model.Index);
                         break;
-                    case 26:
-                        MachineFlagSet(machinesFlags.SM01Flag, model, model.Index);
-                        break;
                     case 27:
-                        MachineFlagSet(machinesFlags.SE12Flag, model, model.Index);
+                        MachineFlagSet(machinesFlags.SM01Flag, model, model.Index);
                         break;
                     case 28:
                         MachineFlagSet(machinesFlags.SR02Flag, model, model.Index);
