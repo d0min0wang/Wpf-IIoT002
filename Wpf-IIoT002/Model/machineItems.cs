@@ -50,6 +50,11 @@ namespace Wpf_IIoT002
             _machineFlagDict.Add("研发楼二楼车间SG03.#01.状态.炉子电源开关", 602);
             _machineFlagDict.Add("研发楼二楼车间SG03.#01.状态.升料机开关", 603);
             _machineFlagDict.Add("研发楼二楼车间SG03.#01.报警信息.报警提示", 604);
+            //SE12 Index:27
+            _machineFlagDict.Add("研发楼二楼车间SE12.#01.状态.机器运行标志", 2701);
+            _machineFlagDict.Add("研发楼二楼车间SE12.#01.状态.炉子电源开关", 2702);
+            _machineFlagDict.Add("研发楼二楼车间SE12.#01.状态.升料机开关", 2703);
+            _machineFlagDict.Add("研发楼二楼车间SE12.#01.报警信息.报警提示", 2704);
             //SE11 Index:7
             _machineFlagDict.Add("研发楼二楼车间SE11.#01.状态.机器运行标志", 701);
             _machineFlagDict.Add("研发楼二楼车间SE11.#01.状态.炉子电源开关", 702);
@@ -154,12 +159,7 @@ namespace Wpf_IIoT002
             _machineFlagDict.Add("研发楼一楼车间SM01.#01.状态.机器运行标志", 2601);
             _machineFlagDict.Add("研发楼一楼车间SM01.#01.状态.炉子电源开关", 2602);
             _machineFlagDict.Add("研发楼一楼车间SM01.#01.状态.升料机开关", 2603);
-            _machineFlagDict.Add("研发楼一楼车间SM01.#01.报警信息.报警提示", 2604);
-            //SE12 Index:27
-            _machineFlagDict.Add("研发楼一楼车间SE12.#01.状态.机器运行标志", 2701);
-            _machineFlagDict.Add("研发楼一楼车间SE12.#01.状态.炉子电源开关", 2702);
-            _machineFlagDict.Add("研发楼一楼车间SE12.#01.状态.升料机开关", 2703);
-            _machineFlagDict.Add("研发楼一楼车间SE12.#01.报警信息.报警提示", 2704);
+            _machineFlagDict.Add("研发楼一楼车间SM01.#01.报警信息.报警提示", 2604);            
             //SR02 Index:28
             _machineFlagDict.Add("研发楼一楼车间SR02.#01.状态.机器运行标志", 2801);
             _machineFlagDict.Add("研发楼一楼车间SR02.#01.状态.炉子电源开关", 2802);
