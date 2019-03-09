@@ -79,7 +79,7 @@ namespace Wpf_IIoT002
         /// <summary>
         /// OPC客户端初始化函数
         /// </summary>
-        private async void OpcClientInit()
+        private async Task OpcClientInit()
         {
             opcClient.Init("192.168.0.130", "Kepware.KEPServerEX.V6");
             //添加点位变化事件回调
