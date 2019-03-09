@@ -65,6 +65,7 @@
     </Compile>
     <Compile Include="Model\Alarm.cs" />
     <Compile Include="Model\AlarmMessages.cs" />
+    <Compile Include="Model\BannerMessages.cs" />
     <Compile Include="Model\machineItems.cs" />
     <Compile Include="Model\OPCCore\OPCChangeModel.cs" />
     <Compile Include="Model\OPCCore\OPCClientWrapper.cs" />

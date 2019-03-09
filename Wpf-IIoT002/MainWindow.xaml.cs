@@ -6,6 +6,7 @@ using System.Windows.Input;
 using System.Threading;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Linq;
 
 namespace Wpf_IIoT002
 {
@@ -16,18 +17,20 @@ namespace Wpf_IIoT002
     {
         //初始化客户端
         private OPCClientWrapper opcClient = new OPCClientWrapper();
+        //初始化Banner Model
+        private BannerMessages bannerMessages = new BannerMessages();
         private static CancellationTokenSource cancelTokenSource = new CancellationTokenSource();
 
         public MainWindow()
         {
             InitializeComponent();
             BindingInit();
-            Stopwatch watch = new Stopwatch();///用于计算时间
-            watch.Start();
-            Parallel.Invoke(
-                () => OpcClientInit());
-            watch.Stop();
-            label184.Text = watch.ElapsedMilliseconds.ToString();
+            //Stopwatch watch = new Stopwatch();///用于计算时间
+            //watch.Start();
+            //Parallel.Invoke(
+            //    () => OpcClientInit());
+            //watch.Stop();
+            //label184.Text = watch.ElapsedMilliseconds.ToString();
         }
 
         /// <summary>
@@ -35,6 +38,8 @@ namespace Wpf_IIoT002
         /// </summary>
         private void BindingInit()
         {
+            //Banner
+            GridBanner.DataContext = bannerMessages;
             //研发二楼车间
             DG01Status.DataContext = machinesFlags.DY04Flag;
             DY03Status.DataContext = machinesFlags.DY03Flag;
@@ -220,7 +225,6 @@ namespace Wpf_IIoT002
                 }
             }
             //label184.Text = machinesFlags.SR01Flag.MachineStatus.ToString();
-            //MachineFlagSet(machinesFlags.SR01Flag, model);
         }
 
         private void MachineFlagSet(machineFlag flag,OPCChangeModel model,int index)
@@ -244,6 +248,46 @@ namespace Wpf_IIoT002
                     flag.AlarmStatusQuality = model.Quality;
                     flag.IsAlarm = Convert.ToBoolean(model.Value);
                     break;
+            }
+            BannerMessageSet(flag, index / 100);
+        }
+
+        private void BannerMessageSet(machineFlag flag,int index)
+        {
+            int _quantityOfMachine = 31;
+            int[] _executing = new int[_quantityOfMachine];
+            int[] _executingAndMaking = new int[_quantityOfMachine];
+            int[] _executingAndStartFurnace = new int[_quantityOfMachine];
+            int[] _executingAndStopFurnace = new int[_quantityOfMachine];
+            int[] _alarming = new int[_quantityOfMachine];
+            //开机数量
+            _executing[index] = flag.getMachineStart();
+            bannerMessages.Executing = _executing.Sum().ToString();
+            //停机数量
+            bannerMessages.NoExecuting = (31 - _executing.Sum()).ToString();
+            //开炉做管数量
+            _executingAndMaking[index]=flag.getMaking();
+            bannerMessages.ExecutingAndMaking = _executingAndMaking.Sum().ToString();
+            //开炉空转数量
+            _executingAndStartFurnace[index] = flag.getIdling();
+            bannerMessages.ExecutingAndStartFurnace = _executingAndStartFurnace.Sum().ToString();
+            //不开炉空转数量
+            _executingAndStopFurnace[index] = flag.getIdlingAndFurnaceStop();
+            bannerMessages.ExecutingAndStopFurnace = _executingAndStopFurnace.Sum().ToString();
+            //报警数量
+            _alarming[index] = flag.getAlarm();
+            bannerMessages.Alarming = _alarming.Sum().ToString();
+            //开机率
+            if (_executing.Sum() > 0)
+            {
+                bannerMessages.UtilizationRatio = (int)Math.Round((double)(_executing.Sum()) * 100.0 / 31.0, 0);
+                bannerMessages.UtilizationRatioStr = ((int)Math.Round((double)(_executing.Sum()) * 100.0 / 31.0, 0)).ToString() + "%";
+            }
+            //做管率
+            if (_executingAndMaking.Sum() > 0)
+            {
+                bannerMessages.MakingRatio = (int)Math.Round((double)(_executingAndMaking.Sum()) * 100.0 / 31.0, 1);
+                bannerMessages.MakingRatioStr = ((int)Math.Round((double)(_executingAndMaking.Sum()) * 100.0 / 31.0, 1)) + "%";
             }
         }
 

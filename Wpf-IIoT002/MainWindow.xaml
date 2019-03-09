@@ -17,7 +17,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Row="0" Background="#4A4A4A">
+        <Grid Grid.Row="0" Background="#4A4A4A" Name="GridBanner">
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
@@ -38,10 +38,10 @@
                 </Grid.ColumnDefinitions>
                 <TextBlock Text="开机率" FontSize="25" Foreground="#FFFFFF" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"></TextBlock>
                 <TextBlock Text="做管率" FontSize="25" Foreground="#FFFFFF" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"></TextBlock>
-                <ProgressBar Name="progressBarRateOfExe" Height="35" Grid.Row="0" Grid.Column="1" BorderThickness="0"></ProgressBar>
-                <ProgressBar Name="progressBarRateOfMaking" Height="35" Grid.Row="1" Grid.Column="1" BorderThickness="0"></ProgressBar>
-                <TextBlock Name="labelRateOfExe" Text="100%" FontSize="25" Foreground="#FFFFFF" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"></TextBlock>
-                <TextBlock Name="labelRateOfMaking" Text="100%" FontSize="25" Foreground="#FFFFFF" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"></TextBlock>
+                <ProgressBar Name="progressBarRateOfExe" Value="{Binding UtilizationRatio}" Height="35" Grid.Row="0" Grid.Column="1" BorderThickness="0"></ProgressBar>
+                <ProgressBar Name="progressBarRateOfMaking" Value="{Binding MakingRatio}" Height="35" Grid.Row="1" Grid.Column="1" BorderThickness="0"></ProgressBar>
+                <TextBlock Name="labelRateOfExe" Text="{Binding UtilizationRatioStr}" FontSize="25" Foreground="#FFFFFF" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"></TextBlock>
+                <TextBlock Name="labelRateOfMaking" Text="{Binding MakingRatioStr}" FontSize="25" Foreground="#FFFFFF" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"></TextBlock>
             </Grid>
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
@@ -63,12 +63,12 @@
                 <TextBlock Text="不开炉空转" FontSize="25" Foreground="#FFFFFF" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                 <TextBlock Text="停机" FontSize="25" Foreground="#FFFFFF" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                 <TextBlock Text="报警" FontSize="25" Foreground="#FFFFFF" Grid.Row="0" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                <TextBlock Name="labelMachineStartStatistic" Text="0" FontSize="60" Foreground="#FFFFFF" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                <TextBlock Name="labelMakingStatistic" Text="0" FontSize="60" Foreground="#FFFFFF" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                <TextBlock Name="labelIdlingStatistic" Text="0" FontSize="60" Foreground="#FFFFFF" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                <TextBlock Name="labelIdlingAndFurnaceStopStatistic" Text="0" FontSize="60" Foreground="#FFFFFF" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                <TextBlock Name="labelStopStatistic" Text="0" FontSize="60" Foreground="#FFFFFF" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                <TextBlock Name="labelAlarmStatistics" Text="0" FontSize="60" Foreground="#FFFFFF" Grid.Row="1" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                <Label Name="labelMachineStartStatistic" Content="{Binding Executing}" FontSize="60" Foreground="#FFFFFF" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                <Label Name="labelMakingStatistic" Content="{Binding ExecutingAndMaking}" FontSize="60" Foreground="#FFFFFF" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                <Label Name="labelIdlingStatistic" Content="{Binding ExecutingAndStartFurnace}" FontSize="60" Foreground="#FFFFFF" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                <Label Name="labelIdlingAndFurnaceStopStatistic" Content="{Binding ExecutingAndStopFurnace}" FontSize="60" Foreground="#FFFFFF" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                <Label Name="labelStopStatistic" Content="{Binding NoExecuting}" FontSize="60" Foreground="#FFFFFF" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                <Label Name="labelAlarmStatistics" Content="{Binding Alarming}" FontSize="60" Foreground="#FFFFFF" Grid.Row="1" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
                 <TextBlock Text="台" FontSize="25" Foreground="#FFFFFF" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                 <TextBlock Text="台" FontSize="25" Foreground="#FFFFFF" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                 <TextBlock Text="台" FontSize="25" Foreground="#FFFFFF" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
@@ -82,7 +82,7 @@
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
                 <TextBlock Text="研发楼车间" FontSize="30" Foreground="#FFFFFF" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"></TextBlock>
-                <TextBlock Name="labelDateTime" Text="labelDateTime" FontSize="15" Foreground="#FFFFFF" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"></TextBlock>
+                <Label Name="labelDateTime" Content="{Binding CurrentTime}" ContentStringFormat="yyyy-MM-dd HH:mm:ss" FontSize="15" Foreground="#FFFFFF" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"></Label>
             </Grid>
         </Grid>
         <Grid Grid.Row="2"  Margin="5">
