@@ -3,7 +3,7 @@
     public class machinesFlags
     {
         //研发二楼车间
-        public static machineFlag DG01Flag = new machineFlag();
+        public static machineFlag DY04Flag = new machineFlag();
         public static machineFlag DY03Flag = new machineFlag();
         public static machineFlag DY02Flag = new machineFlag();
         public static machineFlag DY01Flag = new machineFlag();

@@ -15,11 +15,11 @@ namespace Wpf_IIoT002
         public machineItems()
         {
             //研发二楼车间
-            //DG01 Index:0
-            _machineFlagDict.Add("研发楼二楼车间DG01.#01.状态.机器运行标志", 1);
-            _machineFlagDict.Add("研发楼二楼车间DG01.#01.状态.炉子电源开关", 2);
-            _machineFlagDict.Add("研发楼二楼车间DG01.#01.状态.升料机开关", 3);
-            _machineFlagDict.Add("研发楼二楼车间DG01.#01.报警信息.报警提示", 4);
+            //DY04 Index:0
+            _machineFlagDict.Add("研发楼二楼车间DY04.#01.状态.机器运行标志", 1);
+            _machineFlagDict.Add("研发楼二楼车间DY04.#01.状态.炉子电源开关", 2);
+            _machineFlagDict.Add("研发楼二楼车间DY04.#01.状态.升料机开关", 3);
+            _machineFlagDict.Add("研发楼二楼车间DY04.#01.报警信息.报警提示", 4);
             //DY03 Index:1
             _machineFlagDict.Add("研发楼二楼车间DY03.#01.状态.机器运行标志", 101);
             _machineFlagDict.Add("研发楼二楼车间DY03.#01.状态.炉子电源开关", 102);
@@ -67,60 +67,63 @@ namespace Wpf_IIoT002
             _machineFlagDict.Add("研发楼二楼车间SY01.#01.报警信息.报警提示", 904);
             //研发二楼洁净车间
             //DE03 Index:10
-            _machineFlagDict.Add("研发楼二楼车间DE03.#01.状态.机器运行标志", 1001);
-            _machineFlagDict.Add("研发楼二楼车间DE03.#01.状态.炉子电源开关", 1002);
-            _machineFlagDict.Add("研发楼二楼车间DE03.#01.状态.升料机开关", 1003);
-            _machineFlagDict.Add("研发楼二楼车间DE03.#01.报警信息.报警提示", 1004);
+            _machineFlagDict.Add("研发楼二楼洁净车间DE03.#01.状态.机器运行标志", 1001);
+            _machineFlagDict.Add("研发楼二楼洁净车间DE03.#01.状态.烤模炉子电源开关", 1002);
+            _machineFlagDict.Add("研发楼二楼洁净车间DE03.#01.状态.升料机开关", 1003);
+            _machineFlagDict.Add("研发楼二楼洁净车间DE03.#01.报警信息.报警提示", 1004);
+            _machineFlagDict.Add("研发楼二楼洁净车间DE03.#01.状态.烤料炉子电源开关", 1005);
             //DE02 Index:11
-            _machineFlagDict.Add("研发楼二楼车间DE02.#01.状态.机器运行标志", 1101);
-            _machineFlagDict.Add("研发楼二楼车间DE02.#01.状态.炉子电源开关", 1102);
-            _machineFlagDict.Add("研发楼二楼车间DE02.#01.状态.升料机开关", 1103);
-            _machineFlagDict.Add("研发楼二楼车间DE02.#01.报警信息.报警提示", 1104);
+            _machineFlagDict.Add("研发楼二楼洁净车间DE02.#01.状态.机器运行标志", 1101);
+            _machineFlagDict.Add("研发楼二楼洁净车间DE02.#01.状态.烤模炉子电源开关", 1102);
+            _machineFlagDict.Add("研发楼二楼洁净车间DE02.#01.状态.升料机开关", 1103);
+            _machineFlagDict.Add("研发楼二楼洁净车间DE02.#01.报警信息.报警提示", 1104);
+            _machineFlagDict.Add("研发楼二楼洁净车间DE02.#01.状态.烤料炉子电源开关", 1105);
             //DE01 Index:12
-            _machineFlagDict.Add("研发楼二楼车间DE01.#01.状态.机器运行标志", 1201);
-            _machineFlagDict.Add("研发楼二楼车间DE01.#01.状态.炉子电源开关", 1202);
-            _machineFlagDict.Add("研发楼二楼车间DE01.#01.状态.升料机开关", 1203);
-            _machineFlagDict.Add("研发楼二楼车间DE01.#01.报警信息.报警提示", 1204);
+            _machineFlagDict.Add("研发楼二楼洁净车间DE01.#01.状态.机器运行标志", 1201);
+            _machineFlagDict.Add("研发楼二楼洁净车间DE01.#01.状态.烤模炉子电源开关", 1202);
+            _machineFlagDict.Add("研发楼二楼洁净车间DE01.#01.状态.升料机开关", 1203);
+            _machineFlagDict.Add("研发楼二楼洁净车间DE01.#01.报警信息.报警提示", 1204);
+            _machineFlagDict.Add("研发楼二楼洁净车间DE01.#01.状态.烤料炉子电源开关", 1205);
             //SE08 Index:13
-            _machineFlagDict.Add("研发楼二楼车间SE08.#01.状态.机器运行标志", 1301);
-            _machineFlagDict.Add("研发楼二楼车间SE08.#01.状态.炉子电源开关", 1302);
-            _machineFlagDict.Add("研发楼二楼车间SE08.#01.状态.升料机开关", 1303);
-            _machineFlagDict.Add("研发楼二楼车间SE08.#01.报警信息.报警提示", 1304);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE08.#01.状态.机器运行标志", 1301);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE08.#01.状态.炉子电源开关", 1302);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE08.#01.状态.升料机开关", 1303);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE08.#01.报警信息.报警提示", 1304);
             //SE07 Index:14
-            _machineFlagDict.Add("研发楼二楼车间SE07.#01.状态.机器运行标志", 1401);
-            _machineFlagDict.Add("研发楼二楼车间SE07.#01.状态.炉子电源开关", 1402);
-            _machineFlagDict.Add("研发楼二楼车间SE07.#01.状态.升料机开关", 1403);
-            _machineFlagDict.Add("研发楼二楼车间SE07.#01.报警信息.报警提示", 1404);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE07.#01.状态.机器运行标志", 1401);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE07.#01.状态.炉子电源开关", 1402);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE07.#01.状态.升料机开关", 1403);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE07.#01.报警信息.报警提示", 1404);
             //SE06 Index:15
-            _machineFlagDict.Add("研发楼二楼车间SE06.#01.状态.机器运行标志", 1501);
-            _machineFlagDict.Add("研发楼二楼车间SE06.#01.状态.炉子电源开关", 1502);
-            _machineFlagDict.Add("研发楼二楼车间SE06.#01.状态.升料机开关", 1503);
-            _machineFlagDict.Add("研发楼二楼车间SE06.#01.报警信息.报警提示", 1504);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE06.#01.状态.机器运行标志", 1501);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE06.#01.状态.炉子电源开关", 1502);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE06.#01.状态.升料机开关", 1503);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE06.#01.报警信息.报警提示", 1504);
             //SE05 Index:16
-            _machineFlagDict.Add("研发楼二楼车间SE05.#01.状态.机器运行标志", 1601);
-            _machineFlagDict.Add("研发楼二楼车间SE05.#01.状态.炉子电源开关", 1602);
-            _machineFlagDict.Add("研发楼二楼车间SE05.#01.状态.升料机开关", 1603);
-            _machineFlagDict.Add("研发楼二楼车间SE05.#01.报警信息.报警提示", 1604);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE05.#01.状态.机器运行标志", 1601);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE05.#01.状态.炉子电源开关", 1602);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE05.#01.状态.升料机开关", 1603);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE05.#01.报警信息.报警提示", 1604);
             //SE04 Index:17
-            _machineFlagDict.Add("研发楼二楼车间SE04.#01.状态.机器运行标志", 1701);
-            _machineFlagDict.Add("研发楼二楼车间SE04.#01.状态.炉子电源开关", 1702);
-            _machineFlagDict.Add("研发楼二楼车间SE04.#01.状态.升料机开关", 1703);
-            _machineFlagDict.Add("研发楼二楼车间SE04.#01.报警信息.报警提示", 1704);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE04.#01.状态.机器运行标志", 1701);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE04.#01.状态.炉子电源开关", 1702);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE04.#01.状态.升料机开关", 1703);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE04.#01.报警信息.报警提示", 1704);
             //SE03 Index:18
-            _machineFlagDict.Add("研发楼二楼车间SE03.#01.状态.机器运行标志", 1801);
-            _machineFlagDict.Add("研发楼二楼车间SE03.#01.状态.炉子电源开关", 1802);
-            _machineFlagDict.Add("研发楼二楼车间SE03.#01.状态.升料机开关", 1803);
-            _machineFlagDict.Add("研发楼二楼车间SE03.#01.报警信息.报警提示", 1804);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE03.#01.状态.机器运行标志", 1801);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE03.#01.状态.炉子电源开关", 1802);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE03.#01.状态.升料机开关", 1803);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE03.#01.报警信息.报警提示", 1804);
             //SE02 Index:19
-            _machineFlagDict.Add("研发楼二楼车间SE02.#01.状态.机器运行标志", 1901);
-            _machineFlagDict.Add("研发楼二楼车间SE02.#01.状态.炉子电源开关", 1902);
-            _machineFlagDict.Add("研发楼二楼车间SE02.#01.状态.升料机开关", 1903);
-            _machineFlagDict.Add("研发楼二楼车间SE02.#01.报警信息.报警提示", 1904);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE02.#01.状态.机器运行标志", 1901);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE02.#01.状态.炉子电源开关", 1902);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE02.#01.状态.升料机开关", 1903);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE02.#01.报警信息.报警提示", 1904);
             //SE01 Index:20
-            _machineFlagDict.Add("研发楼二楼车间SE01.#01.状态.机器运行标志", 2001);
-            _machineFlagDict.Add("研发楼二楼车间SE01.#01.状态.炉子电源开关", 2002);
-            _machineFlagDict.Add("研发楼二楼车间SE01.#01.状态.升料机开关", 2003);
-            _machineFlagDict.Add("研发楼二楼车间SE01.#01.报警信息.报警提示", 2004);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE01.#01.状态.机器运行标志", 2001);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE01.#01.状态.炉子电源开关", 2002);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE01.#01.状态.升料机开关", 2003);
+            _machineFlagDict.Add("研发楼二楼洁净车间SE01.#01.报警信息.报警提示", 2004);
             //研发一楼车间
             //DF20 Index:21
             _machineFlagDict.Add("研发楼一楼车间DF20.#01.状态.机器运行标志", 2101);
@@ -128,10 +131,10 @@ namespace Wpf_IIoT002
             _machineFlagDict.Add("研发楼一楼车间DF20.#01.状态.升料机开关", 2103);
             _machineFlagDict.Add("研发楼一楼车间DF20.#01.报警信息.报警提示", 2104);
             //DF18 Index:22
-            _machineFlagDict.Add("研发楼一楼车间DE18.#01.状态.机器运行标志", 2201);
-            _machineFlagDict.Add("研发楼一楼车间DE18.#01.状态.炉子电源开关", 2202);
-            _machineFlagDict.Add("研发楼一楼车间DE18.#01.状态.升料机开关", 2203);
-            _machineFlagDict.Add("研发楼一楼车间DE18.#01.报警信息.报警提示", 2204);
+            _machineFlagDict.Add("研发楼一楼车间DF18.#01.状态.机器运行标志", 2201);
+            _machineFlagDict.Add("研发楼一楼车间DF18.#01.状态.炉子电源开关", 2202);
+            _machineFlagDict.Add("研发楼一楼车间DF18.#01.状态.升料机开关", 2203);
+            _machineFlagDict.Add("研发楼一楼车间DF18.#01.报警信息.报警提示", 2204);
             //DE12 Index:23
             _machineFlagDict.Add("研发楼一楼车间DE12.#01.状态.机器运行标志", 2301);
             _machineFlagDict.Add("研发楼一楼车间DE12.#01.状态.炉子电源开关", 2302);

@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Threading;
 using System.ComponentModel;
+using System.Diagnostics;
 
 namespace Wpf_IIoT002
 {
@@ -21,6 +22,12 @@ namespace Wpf_IIoT002
         {
             InitializeComponent();
             BindingInit();
+            Stopwatch watch = new Stopwatch();///用于计算时间
+            watch.Start();
+            Parallel.Invoke(
+                () => OpcClientInit());
+            watch.Stop();
+            label184.Text = watch.ElapsedMilliseconds.ToString();
         }
 
         /// <summary>
@@ -29,7 +36,7 @@ namespace Wpf_IIoT002
         private void BindingInit()
         {
             //研发二楼车间
-            DG01Status.DataContext = machinesFlags.DG01Flag;
+            DG01Status.DataContext = machinesFlags.DY04Flag;
             DY03Status.DataContext = machinesFlags.DY03Flag;
             DY02Status.DataContext = machinesFlags.DY02Flag;
             DY01Status.DataContext = machinesFlags.DY01Flag;
@@ -111,10 +118,104 @@ namespace Wpf_IIoT002
                 //        machinesFlags.SR01Flag.IsAlarm = (Boolean)model.Value;
                 //        break;
                 //}
+
                 switch(model.Index/100)
                 {
+                    //研发楼二楼
+                    case 0:
+                        MachineFlagSet(machinesFlags.DY04Flag, model, model.Index);
+                        break;
+                    case 1:
+                        MachineFlagSet(machinesFlags.DY03Flag, model, model.Index);
+                        break;
+                    case 2:
+                        MachineFlagSet(machinesFlags.DY02Flag, model, model.Index);
+                        break;
+                    case 3:
+                        MachineFlagSet(machinesFlags.DY01Flag, model, model.Index);
+                        break;
+                    case 4:
+                        MachineFlagSet(machinesFlags.SG01Flag, model, model.Index);
+                        break;
+                    case 5:
+                        MachineFlagSet(machinesFlags.SG02Flag, model, model.Index);
+                        break;
+                    case 6:
+                        MachineFlagSet(machinesFlags.SG03Flag, model, model.Index);
+                        break;
+                    case 7:
+                        MachineFlagSet(machinesFlags.SE11Flag, model, model.Index);
+                        break;
+                    case 8:
+                        MachineFlagSet(machinesFlags.SE14Flag, model, model.Index);
+                        break;
+                    case 9:
+                        MachineFlagSet(machinesFlags.SY01Flag, model, model.Index);
+                        break;
+                    //研发二楼洁净车间
+                    case 10:
+                        MachineFlagSet(machinesFlags.DE03Flag, model, model.Index);
+                        break;
+                    case 11:
+                        MachineFlagSet(machinesFlags.DE02Flag, model, model.Index);
+                        break;
+                    case 12:
+                        MachineFlagSet(machinesFlags.DE01Flag, model, model.Index);
+                        break;
+                    case 13:
+                        MachineFlagSet(machinesFlags.SE08Flag, model, model.Index);
+                        break;
+                    case 14:
+                        MachineFlagSet(machinesFlags.SE07Flag, model, model.Index);
+                        break;
+                    case 15:
+                        MachineFlagSet(machinesFlags.SE06Flag, model, model.Index);
+                        break;
+                    case 16:
+                        MachineFlagSet(machinesFlags.SE05Flag, model, model.Index);
+                        break;
+                    case 17:
+                        MachineFlagSet(machinesFlags.SE04Flag, model, model.Index);
+                        break;
+                    case 18:
+                        MachineFlagSet(machinesFlags.SE03Flag, model, model.Index);
+                        break;
+                    case 19:
+                        MachineFlagSet(machinesFlags.SE02Flag, model, model.Index);
+                        break;
+                    case 20:
+                        MachineFlagSet(machinesFlags.SE01Flag, model, model.Index);
+                        break;
+                    //研发一楼车间
+                    case 21:
+                        MachineFlagSet(machinesFlags.DF20Flag, model, model.Index);
+                        break;
+                    case 22:
+                        MachineFlagSet(machinesFlags.DF18Flag, model, model.Index);
+                        break;
+                    case 23:
+                        MachineFlagSet(machinesFlags.DE12Flag, model, model.Index);
+                        break;
+                    case 24:
+                        MachineFlagSet(machinesFlags.DE11Flag, model, model.Index);
+                        break;
+                    case 25:
+                        MachineFlagSet(machinesFlags.SM02Flag, model, model.Index);
+                        break;
+                    case 26:
+                        MachineFlagSet(machinesFlags.SM01Flag, model, model.Index);
+                        break;
+                    case 27:
+                        MachineFlagSet(machinesFlags.SE12Flag, model, model.Index);
+                        break;
+                    case 28:
+                        MachineFlagSet(machinesFlags.SR02Flag, model, model.Index);
+                        break;
                     case 29:
                         MachineFlagSet(machinesFlags.SR01Flag, model, model.Index);
+                        break;
+                    case 30:
+                        MachineFlagSet(machinesFlags.DF21Flag, model, model.Index);
                         break;
                 }
             }
@@ -129,19 +230,19 @@ namespace Wpf_IIoT002
                 //MachineFlagSet(machinesFlags.SR01Flag, model);
                 case 1:
                     flag.MachineStartusQuality = model.Quality;
-                    flag.IsMachineStart = (Boolean)model.Value;
+                    flag.IsMachineStart = Convert.ToBoolean(model.Value);
                     break;
                 case 2:
                     flag.FurnaceStartusQuality = model.Quality;
-                    flag.IsFurnaceStart = (Boolean)model.Value;
+                    flag.IsFurnaceStart = Convert.ToBoolean(model.Value);
                     break;
                 case 3:
                     flag.LiterStartusQuality = model.Quality;
-                    flag.IsLiterStart = (Boolean)model.Value;
+                    flag.IsLiterStart = Convert.ToBoolean(model.Value);
                     break;
                 case 4:
                     flag.AlarmStatusQuality = model.Quality;
-                    flag.IsAlarm = (Boolean)model.Value;
+                    flag.IsAlarm = Convert.ToBoolean(model.Value);
                     break;
             }
         }

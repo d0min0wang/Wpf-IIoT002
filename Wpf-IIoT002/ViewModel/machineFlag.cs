@@ -95,7 +95,7 @@ namespace Wpf_IIoT002
             set
             {
                 _isAlarm = value;
-                //NotifyPropertyChanged("IsAlarm");
+                AlarmStatus = Convert.ToInt32(value);
                 NotifyPropertyChanged("AlarmStatus");
             }
         }
@@ -334,7 +334,7 @@ namespace Wpf_IIoT002
                     }
                     else
                     {
-                        _alarmStatus= 2;//无报警则显示绿色
+                        _alarmStatus= 0;//无报警则显示绿色
                     }
                 }
                 else
