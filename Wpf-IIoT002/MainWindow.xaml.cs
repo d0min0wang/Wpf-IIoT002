@@ -86,13 +86,19 @@ namespace Wpf_IIoT002
             opcClient.OpcDataChangedEvent += new OPCDataChangedHandler(OpcClient_OpcDataChangedEvent);
             //添加监视点位
             machineItems MachineItems = new machineItems();
-            //await Task.Run(() =>
-            //{
-                foreach (KeyValuePair<string, int> keyValuePair in MachineItems.getMachineFlagDict())
+            ////await Task.Run(() =>
+            ////{
+            //    foreach (KeyValuePair<string, int> keyValuePair in MachineItems.getMachineFlagDict())
+            //    {
+            //    await Task.Run(() => { opcClient.MonitorOPCItem(keyValuePair.Key, keyValuePair.Value); });
+            //    }
+            ////});
+            await Task.Run(() =>
+                Parallel.ForEach(MachineItems.getMachineFlagDict(), keyValuePair=>
                 {
-                await Task.Run(() => { opcClient.MonitorOPCItem(keyValuePair.Key, keyValuePair.Value); });
+                    opcClient.MonitorOPCItem(keyValuePair.Key, keyValuePair.Value);
                 }
-            //});
+            ));
             MachineItems.Dispose();
         }
 
