@@ -11,7 +11,10 @@ namespace Wpf_IIoT002
     {
         //当前时间
         private DateTime _currentTime;
-
+        /// <summary>
+        /// 构造函数
+        /// 在本函数中实时更新时间的显示
+        /// </summary>
         public BannerMessages()
         {
             _currentTime = DateTime.Now;

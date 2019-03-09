@@ -34,7 +34,7 @@ namespace Wpf_IIoT002
         }
 
         /// <summary>
-        /// 初始化数据绑定
+        /// 初始化数据绑定函数
         /// </summary>
         private void BindingInit()
         {
@@ -86,44 +86,26 @@ namespace Wpf_IIoT002
             opcClient.OpcDataChangedEvent += new OPCDataChangedHandler(OpcClient_OpcDataChangedEvent);
             //添加监视点位
             machineItems MachineItems = new machineItems();
-            await Task.Run(() =>
-            {
+            //await Task.Run(() =>
+            //{
                 foreach (KeyValuePair<string, int> keyValuePair in MachineItems.getMachineFlagDict())
                 {
-                     opcClient.MonitorOPCItem(keyValuePair.Key, keyValuePair.Value);
+                await Task.Run(() => { opcClient.MonitorOPCItem(keyValuePair.Key, keyValuePair.Value); });
                 }
-            });
+            //});
             MachineItems.Dispose();
-            //opcClient.MonitorOPCItem("研发楼一楼车间SR01.#01.状态.机器运行标志", 2901);
-            //opcClient.MonitorOPCItem("研发楼一楼车间SR01.#01.状态.炉子电源开关", 2902);
-            //opcClient.MonitorOPCItem("研发楼一楼车间SR01.#01.状态.升料机开关", 2903);
         }
 
+        /// <summary>
+        /// OPC数据变化响应事件
+        /// </summary>
+        /// <param name="list"></param>
         private void OpcClient_OpcDataChangedEvent(List<OPCChangeModel> list)
         {
+            //Console.WriteLine("调用Method1的线程ID为：{0}", Thread.CurrentThread.ManagedThreadId);
             //OPC值变化监视事件处理函数
             foreach (OPCChangeModel model in list)
             {
-                //switch(model.Index)
-                //{
-                //    case 2901:
-                //        machinesFlags.SR01Flag.MachineStartusQuality = model.Quality;
-                //        machinesFlags.SR01Flag.IsMachineStart = (Boolean)model.Value;
-                //        break;
-                //    case 2902:
-                //        machinesFlags.SR01Flag.FurnaceStartusQuality = model.Quality;
-                //        machinesFlags.SR01Flag.IsFurnaceStart = (Boolean)model.Value;
-                //        break;
-                //    case 2903:
-                //        machinesFlags.SR01Flag.LiterStartusQuality = model.Quality;
-                //        machinesFlags.SR01Flag.IsLiterStart = (Boolean)model.Value;
-                //        break;
-                //    case 2904:
-                //        machinesFlags.SR01Flag.AlarmStatusQuality = model.Quality;
-                //        machinesFlags.SR01Flag.IsAlarm = (Boolean)model.Value;
-                //        break;
-                //}
-
                 switch(model.Index/100)
                 {
                     //研发楼二楼
@@ -227,6 +209,12 @@ namespace Wpf_IIoT002
             //label184.Text = machinesFlags.SR01Flag.MachineStatus.ToString();
         }
 
+        /// <summary>
+        /// 机器状态数据更新函数
+        /// </summary>
+        /// <param name="flag"></param>
+        /// <param name="model"></param>
+        /// <param name="index"></param>
         private void MachineFlagSet(machineFlag flag,OPCChangeModel model,int index)
         {
             switch (index%100)
@@ -252,6 +240,11 @@ namespace Wpf_IIoT002
             BannerMessageSet(flag, index / 100);
         }
 
+        /// <summary>
+        /// Banner数据更新函数
+        /// </summary>
+        /// <param name="flag"></param>
+        /// <param name="index"></param>
         private void BannerMessageSet(machineFlag flag,int index)
         {
             int _quantityOfMachine = 31;
