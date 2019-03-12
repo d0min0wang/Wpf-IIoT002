@@ -228,6 +228,9 @@ namespace Wpf_IIoT002
                     case (int)MachineIndex.SR01:
                         MachineFlagSet(GlobalVars.SR01Flag, model, model.Index);
                         break;
+                    case (int)MachineIndex.DM01:
+                        //MachineFlagSet(GlobalVars.SR01Flag, model, model.Index);
+                        break;
                     case (int)MachineIndex.DF21:
                         MachineFlagSet(GlobalVars.DF21Flag, model, model.Index);
                         break;

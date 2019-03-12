@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Wpf_IIoT002
+﻿namespace Wpf_IIoT002
 {
+    /// <summary>
+    /// 机器的逻辑编号
+    /// </summary>
     public enum MachineIndex
     {
         DY04=1,
@@ -38,6 +35,7 @@ namespace Wpf_IIoT002
         SM01=28,
         SR02=29,
         SR01=30,
-        DF21=31
+        DM01=31,
+        DF21=32
     }
 }
