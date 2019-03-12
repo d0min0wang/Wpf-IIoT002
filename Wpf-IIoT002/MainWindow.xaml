@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_IIoT002"
         mc:Ignorable="d"
-        Title="研发楼车间" Height="1080" Width="1920" MinWidth="1920" MinHeight="1080" Closing="Window_Closing" Icon="Images/icon.png" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        Title="研发楼车间" Height="1080" Width="1920" MinWidth="1920" MinHeight="1080" Closing="Window_Closing" Icon="Images/icon.png" WindowStartupLocation="CenterScreen" WindowState="Maximized" Loaded="Window_Loaded">
     <Window.Resources>
         <local:ColorToBrushConverter x:Key="ColorToBrushConverter"></local:ColorToBrushConverter>
     </Window.Resources>
@@ -122,18 +122,18 @@
             <Rectangle Grid.Row="4" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="10" Stroke="DarkGray" StrokeThickness="2" Margin="0,0" RadiusX="5" RadiusY="5"></Rectangle>
             <TextBlock Name="mark11" Text="研发楼一楼车间" FontSize="16" Foreground="DarkGray"  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Top" TextAlignment="Left" Margin="20,5,25,0"/>
             <!--DY04界面开始代码段-->
-            <Grid Grid.Row="1" Grid.Column="3" Margin="0,0,0,35">
+            <Grid Grid.Row="1" Grid.Column="3" Margin="0,0,0,35" Name="DG01Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="6*"></RowDefinition>
                     <RowDefinition Height="5*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="0" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageDG01" Grid.Row="1" Source="Images/大机-灰.png" MouseEnter="ImageDG01_MouseEnter" MouseLeave="ImageDG01_MouseLeave">
+                <Image x:Name="ImageDY04" Grid.Row="1" Source="Images/大机-灰.png" MouseEnter="ImageDY04_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="0" Margin="6,13" Name="DG01Status">
+                <Grid Grid.Row="0" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -182,18 +182,18 @@
             </Grid>
             <!--DG01界面完-->
             <!--DY03界面开始代码段-->
-            <Grid Grid.Row="1" Grid.Column="7" Margin="0,0,0,35">
+            <Grid Grid.Row="1" Grid.Column="7" Margin="0,0,0,35" Name="DY03Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="6*"></RowDefinition>
                     <RowDefinition Height="5*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="0" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageDY03" Grid.Row="1" Source="Images/大机-灰.png" MouseEnter="ImageDY03_MouseEnter" MouseLeave="ImageDY03_MouseLeave">
+                <Image x:Name="ImageDY03" Grid.Row="1" Source="Images/大机-灰.png" MouseEnter="ImageDY03_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="0" Margin="6,13" Name="DY03Status">
+                <Grid Grid.Row="0" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -242,18 +242,18 @@
             </Grid>
             <!--DY03界面完-->
             <!--DY02界面开始代码段-->
-            <Grid Grid.Row="1" Grid.Column="8" Margin="0,0,0,35">
+            <Grid Grid.Row="1" Grid.Column="8" Margin="0,0,0,35" Name="DY02Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="6*"></RowDefinition>
                     <RowDefinition Height="5*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="0" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageDY02" Grid.Row="1" Source="Images/大机-灰.png" MouseEnter="ImageDY02_MouseEnter" MouseLeave="ImageDY02_MouseLeave">
+                <Image x:Name="ImageDY02" Grid.Row="1" Source="Images/大机-灰.png" MouseEnter="ImageDY02_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="0" Margin="6,13" Name="DY02Status">
+                <Grid Grid.Row="0" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -302,18 +302,18 @@
             </Grid>
             <!--DY02界面完-->
             <!--DY01界面开始代码段-->
-            <Grid Grid.Row="1" Grid.Column="9" Margin="0,0,0,35">
+            <Grid Grid.Row="1" Grid.Column="9" Margin="0,0,0,35" Name="DY01Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="6*"></RowDefinition>
                     <RowDefinition Height="5*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="0" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageDY01" Grid.Row="1" Source="Images/大机-灰.png" MouseEnter="ImageDY01_MouseEnter" MouseLeave="ImageDY01_MouseLeave">
+                <Image x:Name="ImageDY01" Grid.Row="1" Source="Images/大机-灰.png" MouseEnter="ImageDY01_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="0" Margin="6,13" Name="DY01Status">
+                <Grid Grid.Row="0" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -362,18 +362,18 @@
             </Grid>
             <!--DY01界面完-->
             <!--DE03界面开始代码段-->
-            <Grid Grid.Row="1" Grid.Column="16" Margin="0,0,0,35">
+            <Grid Grid.Row="1" Grid.Column="16" Margin="0,0,0,35" Name="DE03Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="6*"></RowDefinition>
                     <RowDefinition Height="5*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="0" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageDE03" Grid.Row="1" Source="Images/大机-灰.png" MouseEnter="ImageDE03_MouseEnter" MouseLeave="ImageDE03_MouseLeave">
+                <Image x:Name="ImageDE03" Grid.Row="1" Source="Images/大机-灰.png" MouseEnter="ImageDE03_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="0" Margin="6,13" Name="DE03Status">
+                <Grid Grid.Row="0" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -422,18 +422,18 @@
             </Grid>
             <!--DE03界面完-->
             <!--DE02界面开始代码段-->
-            <Grid Grid.Row="1" Grid.Column="17" Margin="0,0,0,35">
+            <Grid Grid.Row="1" Grid.Column="17" Margin="0,0,0,35" Name="DE02Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="6*"></RowDefinition>
                     <RowDefinition Height="5*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="0" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageDE02" Grid.Row="1" Source="Images/大机-灰.png" MouseEnter="ImageDE02_MouseEnter" MouseLeave="ImageDE02_MouseLeave">
+                <Image x:Name="ImageDE02" Grid.Row="1" Source="Images/大机-灰.png" MouseEnter="ImageDE02_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="0" Margin="6,13" Name="DE02Status">
+                <Grid Grid.Row="0" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -482,18 +482,18 @@
             </Grid>
             <!--DE02界面完-->
             <!--DE01界面开始代码段-->
-            <Grid Grid.Row="1" Grid.Column="18" Margin="0,0,0,35">
+            <Grid Grid.Row="1" Grid.Column="18" Margin="0,0,0,35" Name="DE01Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="6*"></RowDefinition>
                     <RowDefinition Height="5*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="0" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageDE01" Grid.Row="1" Source="Images/大机-灰.png" MouseEnter="ImageDE01_MouseEnter" MouseLeave="ImageDE01_MouseLeave">
+                <Image x:Name="ImageDE01" Grid.Row="1" Source="Images/大机-灰.png" MouseEnter="ImageDE01_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="0" Margin="6,13" Name="DE01Status">
+                <Grid Grid.Row="0" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -542,18 +542,18 @@
             </Grid>
             <!--DE01号界面完-->
             <!--SG01界面开始代码段-->
-            <Grid Grid.Row="2" Grid.Column="0" Margin="0,18,0,17">
+            <Grid Grid.Row="2" Grid.Column="0" Margin="0,18,0,17" Name="SG01Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageSG01" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSG01_MouseEnter" MouseLeave="ImageSG01_MouseLeave">
+                <Image x:Name="ImageSG01" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSG01_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13" Name="SG01Status">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -602,18 +602,18 @@
             </Grid>
             <!--SG01界面完-->
             <!--SG02界面开始代码段-->
-            <Grid Grid.Row="2" Grid.Column="1" Margin="0,18,0,17">
+            <Grid Grid.Row="2" Grid.Column="1" Margin="0,18,0,17" Name="SG02Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageSG02" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSG02_MouseEnter" MouseLeave="ImageSG02_MouseLeave">
+                <Image x:Name="ImageSG02" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSG02_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13" Name="SG02Status">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -662,18 +662,18 @@
             </Grid>
             <!--SG02界面完-->
             <!--SG03界面开始代码段-->
-            <Grid Grid.Row="2" Grid.Column="2" Margin="0,18,0,17">
+            <Grid Grid.Row="2" Grid.Column="2" Margin="0,18,0,17" Name="SG03Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageSG03" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSG03_MouseEnter" MouseLeave="ImageSG03_MouseLeave">
+                <Image x:Name="ImageSG03" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSG03_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13" Name="SG03Status">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -722,18 +722,18 @@
             </Grid>
             <!--SE03界面完-->
             <!--SE14界面开始代码段-->
-            <Grid Grid.Row="2" Grid.Column="3" Margin="0,18,0,17">
+            <Grid Grid.Row="2" Grid.Column="3" Margin="0,18,0,17" Name="SE14Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageSE" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE14_MouseEnter" MouseLeave="ImageSE14_MouseLeave">
+                <Image x:Name="ImageSE" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE14_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13" Name="SE14Status">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -782,18 +782,18 @@
             </Grid>
             <!--SE14界面完-->
             <!--SE12界面开始代码段-->
-            <Grid Grid.Row="2" Grid.Column="4" Margin="0,18,0,17">
+            <Grid Grid.Row="2" Grid.Column="4" Margin="0,18,0,17" Name="SE12Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageSE12" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE12_MouseEnter" MouseLeave="ImageSE12_MouseLeave">
+                <Image x:Name="ImageSE12" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE12_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13" Name="SE12Status">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -842,18 +842,18 @@
             </Grid>
             <!--SE12界面完-->
             <!--SE11界面开始代码段-->
-            <Grid Grid.Row="2" Grid.Column="5" Margin="0,18,0,17">
+            <Grid Grid.Row="2" Grid.Column="5" Margin="0,18,0,17" Name="SE11Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageSE11" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE11_MouseEnter" MouseLeave="ImageSE11_MouseLeave">
+                <Image x:Name="ImageSE11" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE11_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13" Name="SE11Status">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -903,18 +903,18 @@
             <!--SE11界面完-->
             
             <!--SY01界面开始代码段-->
-            <Grid Grid.Row="2" Grid.Column="9" Margin="0,18,0,17">
+            <Grid Grid.Row="2" Grid.Column="9" Margin="0,18,0,17" Name="SY01Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageSY01" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSY01_MouseEnter" MouseLeave="ImageSY01_MouseLeave">
+                <Image x:Name="ImageSY01" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSY01_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13" Name="SY01Status">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -963,18 +963,18 @@
             </Grid>
             <!--SY01界面完-->
             <!--SE08界面开始代码段-->
-            <Grid Grid.Row="2" Grid.Column="11" Margin="0,18,0,17">
+            <Grid Grid.Row="2" Grid.Column="11" Margin="0,18,0,17" Name="SE08Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageSE08" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE08_MouseEnter" MouseLeave="ImageSE08_MouseLeave">
+                <Image x:Name="ImageSE08" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE08_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13" Name="SE08Status">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1023,18 +1023,18 @@
             </Grid>
             <!--SE08界面完-->
             <!--SE07界面开始代码段-->
-            <Grid Grid.Row="2" Grid.Column="12" Margin="0,18,0,17">
+            <Grid Grid.Row="2" Grid.Column="12" Margin="0,18,0,17" Name="SE07Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageSE07" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE07_MouseEnter" MouseLeave="ImageSE07_MouseLeave">
+                <Image x:Name="ImageSE07" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE07_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13" Name="SE07Status">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1083,18 +1083,18 @@
             </Grid>
             <!--SE07界面完-->
             <!--SE06界面开始代码段-->
-            <Grid Grid.Row="2" Grid.Column="13" Margin="0,18,0,17">
+            <Grid Grid.Row="2" Grid.Column="13" Margin="0,18,0,17" Name="SE06Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageSE06" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE06_MouseEnter" MouseLeave="ImageSE06_MouseLeave">
+                <Image x:Name="ImageSE06" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE06_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13" Name="SE06Status">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1143,18 +1143,18 @@
             </Grid>
             <!--SE06界面完-->
             <!--SE05界面开始代码段-->
-            <Grid Grid.Row="2" Grid.Column="14" Margin="0,18,0,17">
+            <Grid Grid.Row="2" Grid.Column="14" Margin="0,18,0,17" Name="SE05Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageSE05" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE05_MouseEnter" MouseLeave="ImageSE05_MouseLeave">
+                <Image x:Name="ImageSE05" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE05_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13" Name="SE05Status">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1203,18 +1203,18 @@
             </Grid>
             <!--SE05界面完-->
             <!--SE04界面开始代码段-->
-            <Grid Grid.Row="2" Grid.Column="15" Margin="0,18,0,17">
+            <Grid Grid.Row="2" Grid.Column="15" Margin="0,18,0,17" Name="SE04Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageSE04" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE04_MouseEnter" MouseLeave="ImageSE04_MouseLeave">
+                <Image x:Name="ImageSE04" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE04_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13" Name="SE04Status">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1263,18 +1263,18 @@
             </Grid>
             <!--SE04界面完-->
             <!--SE03界面开始代码段-->
-            <Grid Grid.Row="2" Grid.Column="16" Margin="0,18,0,17">
+            <Grid Grid.Row="2" Grid.Column="16" Margin="0,18,0,17" Name="SE03Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageSE03" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE03_MouseEnter" MouseLeave="ImageSE03_MouseLeave">
+                <Image x:Name="ImageSE03" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE03_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13" Name="SE03Status">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1323,18 +1323,18 @@
             </Grid>
             <!--SE03界面完-->
             <!--SE02界面开始代码段-->
-            <Grid Grid.Row="2" Grid.Column="17" Margin="0,18,0,17">
+            <Grid Grid.Row="2" Grid.Column="17" Margin="0,18,0,17" Name="SE02Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageSE02" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE02_MouseEnter" MouseLeave="ImageSE02_MouseLeave">
+                <Image x:Name="ImageSE02" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE02_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13" Name="SE02Status">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1383,18 +1383,18 @@
             </Grid>
             <!--SE02界面完-->
             <!--SE01界面开始代码段-->
-            <Grid Grid.Row="2" Grid.Column="18" Margin="0,18,0,17">
+            <Grid Grid.Row="2" Grid.Column="18" Margin="0,18,0,17" Name="SE01Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageSE01" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE01_MouseEnter" MouseLeave="ImageSE01_MouseLeave">
+                <Image x:Name="ImageSE01" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSE01_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13" Name="SE01Status">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1443,18 +1443,18 @@
             </Grid>
             <!--SE01界面完--> 
             <!--DF18界面开始代码段-->
-            <Grid Grid.Row="5" Grid.Column="0" Margin="0,35,0,0">
+            <Grid Grid.Row="5" Grid.Column="0" Margin="0,35,0,0" Name="DF18Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageDF18" Grid.Row="0" Source="Images/大机-灰.png" MouseEnter="ImageDF18_MouseEnter" MouseLeave="ImageDF18_MouseLeave">
+                <Image x:Name="ImageDF18" Grid.Row="0" Source="Images/大机-灰.png" MouseEnter="ImageDF18_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13" Name="DF18Status">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1503,18 +1503,18 @@
             </Grid>
             <!--DF18界面完-->
             <!--DE12界面开始代码段-->
-            <Grid Grid.Row="5" Grid.Column="1" Margin="0,35,0,0">
+            <Grid Grid.Row="5" Grid.Column="1" Margin="0,35,0,0" Name="DE12Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageDE12" Grid.Row="0" Source="Images/大机-灰.png" MouseEnter="ImageDE12_MouseEnter" MouseLeave="ImageDE12_MouseLeave">
+                <Image x:Name="ImageDE12" Grid.Row="0" Source="Images/大机-灰.png" MouseEnter="ImageDE12_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13" Name="DE12Status">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1563,18 +1563,18 @@
             </Grid>
             <!--DE12界面完-->
             <!--DE11界面开始代码段-->
-            <Grid Grid.Row="5" Grid.Column="2" Margin="0,35,0,0">
+            <Grid Grid.Row="5" Grid.Column="2" Margin="0,35,0,0" Name="DE11Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageDE11" Grid.Row="0" Source="Images/大机-灰.png" MouseEnter="ImageDE11_MouseEnter" MouseLeave="ImageDE11_MouseLeave">
+                <Image x:Name="ImageDE11" Grid.Row="0" Source="Images/大机-灰.png" MouseEnter="ImageDE11_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13" Name="DE11Status">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1623,18 +1623,18 @@
             </Grid>
             <!--DE11界面完-->
             <!--DF20界面开始代码段-->
-            <Grid Grid.Row="5" Grid.Column="3" Margin="0,35,0,0">
+            <Grid Grid.Row="5" Grid.Column="3" Margin="0,35,0,0" Name="DF20Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageDF20" Grid.Row="0" Source="Images/大机-灰.png" MouseEnter="ImageDF20_MouseEnter" MouseLeave="ImageDF20_MouseLeave">
+                <Image x:Name="ImageDF20" Grid.Row="0" Source="Images/大机-灰.png" MouseEnter="ImageDF20_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13" Name="DF20Status">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1683,18 +1683,18 @@
             </Grid>
             <!--DF20界面完-->
             <!--SM02界面开始代码段-->
-            <Grid Grid.Row="5" Grid.Column="4" Margin="0,35,0,0">
+            <Grid Grid.Row="5" Grid.Column="4" Margin="0,35,0,0" Name="SM02Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageSM02" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSM02_MouseEnter" MouseLeave="ImageSM02_MouseLeave">
+                <Image x:Name="ImageSM02" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSM02_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13" Name="SM02Status">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1743,18 +1743,18 @@
             </Grid>
             <!--SM02界面完-->
             <!--SM01界面开始代码段-->
-            <Grid Grid.Row="5" Grid.Column="5" Margin="0,35,0,0">
+            <Grid Grid.Row="5" Grid.Column="5" Margin="0,35,0,0" Name="SM01Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageSM01" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSM01_MouseEnter" MouseLeave="ImageSM01_MouseLeave">
+                <Image x:Name="ImageSM01" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSM01_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13" Name="SM01Status">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1804,18 +1804,18 @@
             <!--SM01界面完-->
             
             <!--SR02界面开始代码段-->
-            <Grid Grid.Row="5" Grid.Column="6" Margin="0,35,0,0">
+            <Grid Grid.Row="5" Grid.Column="6" Margin="0,35,0,0" Name="SR02Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageSR02" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSR02_MouseEnter" MouseLeave="ImageSR02_MouseLeave">
+                <Image x:Name="ImageSR02" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSR02_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13" Name="SR02Status">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1864,18 +1864,18 @@
             </Grid>
             <!--SR02界面完-->
             <!--SR01界面开始代码段-->
-            <Grid Grid.Row="5" Grid.Column="7" Margin="0,35,0,0">
+            <Grid Grid.Row="5" Grid.Column="7" Margin="0,35,0,0" Name="SR01Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageSR01" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSR01_MouseEnter" MouseLeave="ImageSR01_MouseLeave">
+                <Image x:Name="ImageSR01" Grid.Row="0" Source="Images/小机-灰.png" MouseEnter="ImageSR01_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13" Name="SR01Status">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1924,18 +1924,18 @@
             </Grid>
             <!--SR01界面完-->
             <!--DF21界面开始代码段-->
-            <Grid Grid.Row="5" Grid.Column="9" Margin="0,35,0,0">
+            <Grid Grid.Row="5" Grid.Column="9" Margin="0,35,0,0" Name="DF21Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
-                <Image x:Name="ImageDF21" Grid.Row="0" Source="Images/大机-灰.png" MouseEnter="ImageDF21_MouseEnter" MouseLeave="ImageDF21_MouseLeave">
+                <Image x:Name="ImageDF21" Grid.Row="0" Source="Images/大机-灰.png" MouseEnter="ImageDF21_MouseEnter">
                     <Image.ToolTip>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding Toolstip}"/>
                     </Image.ToolTip>
                 </Image>
-                <Grid Grid.Row="1" Margin="6,13" Name="DF21Status">
+                <Grid Grid.Row="1" Margin="6,13">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -1983,7 +1983,8 @@
                 </Grid>
             </Grid>
             <!--DF21界面完-->
-            <TextBlock Name="label184" Text="label184" FontSize="11" Foreground="DarkGray"  Grid.Row="4" Grid.Column="10" Grid.ColumnSpan="2" VerticalAlignment="Top" TextAlignment="Right" Margin="0,10,10,0"/>
+            <TextBlock Name="labelServerStatus" Text="{Binding ServerStatusString}" FontSize="15" Foreground="DarkGray"  Grid.Row="5" Grid.Column="10" Grid.ColumnSpan="2" VerticalAlignment="Bottom" TextAlignment="Right" Margin="0,0,10,10"/>
+            <TextBlock Name="label184" Text="{Binding GuiLoadedTime}" FontSize="11" Foreground="DarkGray"  Grid.Row="4" Grid.Column="10" Grid.ColumnSpan="2" VerticalAlignment="Top" TextAlignment="Right" Margin="0,10,10,0"/>
             <DataGrid Name="dataGridViewAlarmMessage" Grid.Row="4" Grid.RowSpan="2" Grid.Column="12" Grid.ColumnSpan="7" BorderThickness="1" Margin="10" 
                       FontSize="14" AutoGenerateColumns="False" GridLinesVisibility="None" BorderBrush="DarkGray" IsReadOnly="True" RowHeaderWidth="0">
                 <DataGrid.Background>

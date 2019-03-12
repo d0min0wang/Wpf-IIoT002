@@ -1,6 +1,6 @@
 ﻿namespace Wpf_IIoT002
 {
-    public class machinesFlags
+    public class GlobalVars
     {
         //研发二楼车间
         public static machineFlag DY04Flag = new machineFlag();
@@ -36,5 +36,25 @@
         public static machineFlag SR02Flag = new machineFlag();
         public static machineFlag SR01Flag = new machineFlag();
         public static machineFlag DF21Flag = new machineFlag();
+
+        //建立全局静态变量保存Banner信息
+        public static BannerMessages bannerMessages = new BannerMessages();
+
+        ////建立全局静态变量以保存报警信息       
+        //public static List<AlarmMessage> alarmMessages = new List<AlarmMessage>();
+
+        ////建立全局变量保存被触发的报警信息List
+        //public static ObservableCollection<AlarmMessage> AlarmMessagesDS = new ObservableCollection<AlarmMessage>();
+
+        //建立全局变量保存界面加载和服务器状态信息
+        public static StatusMessages statusMessages = new StatusMessages();
+
+        //建立全局变量保存每个机器的可计算信息
+        //int _quantityOfMachine = 33;
+        public static int[] executing = new int[33];
+        public static int[] executingAndMaking = new int[33];
+        public static int[] executingAndStartFurnace = new int[33];
+        public static int[] executingAndStopFurnace = new int[33];
+        public static int[] alarming = new int[33];
     }
 }
