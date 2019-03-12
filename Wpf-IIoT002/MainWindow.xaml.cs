@@ -838,6 +838,10 @@ namespace Wpf_IIoT002
             GlobalVars.DF20Flag.Toolstip = str;
         }
 
+        private void ImageDM01_MouseEnter(object sender, MouseEventArgs e)
+        {
+
+        }
 
         private void ImageDF21_MouseEnter(object sender, MouseEventArgs e)
         {
@@ -882,5 +886,6 @@ namespace Wpf_IIoT002
             opcClient.Disconnect();
         }
 
+        
     }
 }

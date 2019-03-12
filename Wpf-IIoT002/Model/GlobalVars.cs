@@ -1,4 +1,7 @@
-﻿namespace Wpf_IIoT002
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+
+namespace Wpf_IIoT002
 {
     public class GlobalVars
     {
@@ -40,11 +43,11 @@
         //建立全局静态变量保存Banner信息
         public static BannerMessages bannerMessages = new BannerMessages();
 
-        ////建立全局静态变量以保存报警信息       
-        //public static List<AlarmMessage> alarmMessages = new List<AlarmMessage>();
+        //建立全局静态变量以保存报警信息       
+        public static List<AlarmMessage> alarmMessages = new List<AlarmMessage>();
 
-        ////建立全局变量保存被触发的报警信息List
-        //public static ObservableCollection<AlarmMessage> AlarmMessagesDS = new ObservableCollection<AlarmMessage>();
+        //建立全局变量保存被触发的报警信息List
+        public static ObservableCollection<AlarmMessage> AlarmMessagesDS = new ObservableCollection<AlarmMessage>();
 
         //建立全局变量保存界面加载和服务器状态信息
         public static StatusMessages statusMessages = new StatusMessages();

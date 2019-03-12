@@ -132,9 +132,9 @@ namespace Wpf_IIoT002
             //研发一楼车间
             //DF20 Index:22
             _machineFlagDict.Add("研发楼一楼车间DF20.#01.状态.机器运行标志", 2201);
-            _machineFlagDict.Add("研发楼一楼车间DF20.#01.状态.炉子电源开关", 2202);
+            _machineFlagDict.Add("研发楼一楼车间DF20.#02.状态.炉子电源开关", 2202);
             _machineFlagDict.Add("研发楼一楼车间DF20.#01.状态.升料机开关", 2203);
-            _machineFlagDict.Add("研发楼一楼车间DF20.#01.报警信息.报警提示", 2204);
+            _machineFlagDict.Add("研发楼一楼车间DF20.#02.报警信息.报警提示", 2204);
             //DF18 Index:23
             _machineFlagDict.Add("研发楼一楼车间DF18.#01.状态.机器运行标志", 2301);
             _machineFlagDict.Add("研发楼一楼车间DF18.#01.状态.炉子电源开关", 2302);

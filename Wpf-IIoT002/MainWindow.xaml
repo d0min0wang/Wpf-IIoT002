@@ -1923,6 +1923,66 @@
                 </Grid>
             </Grid>
             <!--SR01界面完-->
+            <!--DM01界面开始代码段-->
+            <Grid Grid.Row="5" Grid.Column="8" Margin="0,35,0,0" Name="DM01Status">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*"></RowDefinition>
+                    <RowDefinition Height="6*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Rectangle Grid.Row="1" Stroke="DarkGray" StrokeThickness="1" Margin="5" RadiusX="5" RadiusY="5"></Rectangle>
+                <Image x:Name="ImageDM01" Grid.Row="0" Source="Images/大机-灰.png" MouseEnter="ImageDM01_MouseEnter">
+                    <Image.ToolTip>
+                        <TextBlock Text="{Binding Toolstip}"/>
+                    </Image.ToolTip>
+                </Image>
+                <Grid Grid.Row="1" Margin="6,13">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="DM01" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Ellipse Name="buttonXMachineFlagDM01" Grid.Column="0" Fill="{Binding MachineStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="12" Width="12" ></Ellipse>
+                        <TextBlock Grid.Column="1" Text="开机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Ellipse Name="buttonXFurnaceFlagDM01" Grid.Column="0" Fill="{Binding FurnaceStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="12" Width="12" ></Ellipse>
+                        <TextBlock Grid.Column="1" Text="开炉状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                    </Grid>
+                    <Grid Grid.Row="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Ellipse Name="buttonXLiterFlagDM01" Grid.Column="0" Fill="{Binding LiterStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="12" Width="12" ></Ellipse>
+                        <TextBlock Grid.Column="1" Text="升料机状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                    </Grid>
+                    <Grid Grid.Row="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="22"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Ellipse Name="buttonXAlarmFlagDM01" Grid.Column="0" Fill="{Binding AlarmStatus, Converter={StaticResource ColorToBrushConverter}}" 
+                                 Height="12" Width="12" ></Ellipse>
+                        <TextBlock Grid.Column="1" Text="报警状态" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <!--DM01界面完-->
             <!--DF21界面开始代码段-->
             <Grid Grid.Row="5" Grid.Column="9" Margin="0,35,0,0" Name="DF21Status">
                 <Grid.RowDefinitions>
