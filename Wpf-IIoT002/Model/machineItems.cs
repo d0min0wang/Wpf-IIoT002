@@ -64,23 +64,23 @@ namespace Wpf_IIoT002
             AddStatusItems("研发楼二楼洁净车间", "S7-200", "SE01", (int)MachineIndex.SE01);
             //研发一楼车间
             //DF20 Index:22
-            AddStatusItems("研发楼二楼洁净车间", "S7-1200", "DF20", (int)MachineIndex.DF20);
+            AddStatusItems("研发楼一楼车间", "S7-1200", "DF20", (int)MachineIndex.DF20);
             //DF18 Index:23
-            AddStatusItems("研发楼二楼洁净车间", "S7-200", "DF18", (int)MachineIndex.DF18);
+            AddStatusItems("研发楼一楼车间", "S7-200", "DF18", (int)MachineIndex.DF18);
             //DE12 Index:24
-            AddStatusItems("研发楼二楼洁净车间", "S7-200", "DE12", (int)MachineIndex.DE12);
+            AddStatusItems("研发楼一楼车间", "S7-200", "DE12", (int)MachineIndex.DE12);
             //DE11 Index:25
-            AddStatusItems("研发楼二楼洁净车间", "S7-200", "DE11", (int)MachineIndex.DE11);
+            AddStatusItems("研发楼一楼车间", "S7-200", "DE11", (int)MachineIndex.DE11);
             //SM02 Index:26
-            AddStatusItems("研发楼二楼洁净车间", "S7-200", "SM02", (int)MachineIndex.SM02);
+            AddStatusItems("研发楼一楼车间", "S7-200", "SM02", (int)MachineIndex.SM02);
             //SM01 Index:27
-            AddStatusItems("研发楼二楼洁净车间", "S7-200", "SM01", (int)MachineIndex.SM01);
+            AddStatusItems("研发楼一楼车间", "S7-200", "SM01", (int)MachineIndex.SM01);
             //SR02 Index:28
-            AddStatusItems("研发楼二楼洁净车间", "S7-1200", "SR02", (int)MachineIndex.SR02);
+            AddStatusItems("研发楼一楼车间", "S7-1200", "SR02", (int)MachineIndex.SR02);
             //SR01 Index:29
-            AddStatusItems("研发楼二楼洁净车间", "S7-1200", "SR01", (int)MachineIndex.SR01);
+            AddStatusItems("研发楼一楼车间", "S7-1200", "SR01", (int)MachineIndex.SR01);
             //DF21 Index:30
-            AddStatusItems("研发楼二楼洁净车间", "S7-1200", "DF21", (int)MachineIndex.DF21);
+            AddStatusItems("研发楼一楼车间", "S7-1200", "DF21", (int)MachineIndex.DF21);
         }
 
         private void AddStatusItems(string workshop, string plcType, string machineNo, int index)
