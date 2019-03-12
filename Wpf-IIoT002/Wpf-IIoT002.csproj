@@ -57,7 +57,8 @@
     </ApplicationDefinition>
     <Compile Include="Model\AlarmInfo.cs" />
     <Compile Include="Model\AlarmItems.cs" />
-    <Compile Include="Model\Machineindex.cs" />
+    <Compile Include="Model\MachineIndex.cs" />
+    <Compile Include="Model\StatusInfo.cs" />
     <Compile Include="ViewModel\AlarmMessage.cs" />
     <Compile Include="ViewModel\StatusMessages.cs" />
     <Page Include="MainWindow.xaml">

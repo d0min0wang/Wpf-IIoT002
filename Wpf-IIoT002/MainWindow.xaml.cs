@@ -136,99 +136,99 @@ namespace Wpf_IIoT002
                 switch(model.Index/100)
                 {
                     //研发楼二楼
-                    case 0:
+                    case (int)MachineIndex.DY04:
                         MachineFlagSet(GlobalVars.DY04Flag, model, model.Index);
                         break;
-                    case 1:
+                    case (int)MachineIndex.DY03:
                         MachineFlagSet(GlobalVars.DY03Flag, model, model.Index);
                         break;
-                    case 2:
+                    case (int)MachineIndex.DY02:
                         MachineFlagSet(GlobalVars.DY02Flag, model, model.Index);
                         break;
-                    case 3:
+                    case (int)MachineIndex.DY01:
                         MachineFlagSet(GlobalVars.DY01Flag, model, model.Index);
                         break;
-                    case 4:
+                    case (int)MachineIndex.SG01:
                         MachineFlagSet(GlobalVars.SG01Flag, model, model.Index);
                         break;
-                    case 5:
+                    case (int)MachineIndex.SG02:
                         MachineFlagSet(GlobalVars.SG02Flag, model, model.Index);
                         break;
-                    case 6:
+                    case (int)MachineIndex.SG03:
                         MachineFlagSet(GlobalVars.SG03Flag, model, model.Index);
                         break;                    
-                    case 7:
+                    case (int)MachineIndex.SE14:
                         MachineFlagSet(GlobalVars.SE14Flag, model, model.Index);
                         break;
-                    case 8:
+                    case (int)MachineIndex.SE12:
                         MachineFlagSet(GlobalVars.SE12Flag, model, model.Index);
                         break;
-                    case 9:
+                    case (int)MachineIndex.SE11:
                         MachineFlagSet(GlobalVars.SE11Flag, model, model.Index);
                         break;
-                    case 10:
+                    case (int)MachineIndex.SY01:
                         MachineFlagSet(GlobalVars.SY01Flag, model, model.Index);
                         break;
                     //研发二楼洁净车间
-                    case 11:
+                    case (int)MachineIndex.DE03:
                         MachineFlagSet(GlobalVars.DE03Flag, model, model.Index);
                         break;
-                    case 12:
+                    case (int)MachineIndex.DE02:
                         MachineFlagSet(GlobalVars.DE02Flag, model, model.Index);
                         break;
-                    case 13:
+                    case (int)MachineIndex.DE01:
                         MachineFlagSet(GlobalVars.DE01Flag, model, model.Index);
                         break;
-                    case 14:
+                    case (int)MachineIndex.SE08:
                         MachineFlagSet(GlobalVars.SE08Flag, model, model.Index);
                         break;
-                    case 15:
+                    case (int)MachineIndex.SE07:
                         MachineFlagSet(GlobalVars.SE07Flag, model, model.Index);
                         break;
-                    case 16:
+                    case (int)MachineIndex.SE06:
                         MachineFlagSet(GlobalVars.SE06Flag, model, model.Index);
                         break;
-                    case 17:
+                    case (int)MachineIndex.SE05:
                         MachineFlagSet(GlobalVars.SE05Flag, model, model.Index);
                         break;
-                    case 18:
+                    case (int)MachineIndex.SE04:
                         MachineFlagSet(GlobalVars.SE04Flag, model, model.Index);
                         break;
-                    case 19:
+                    case (int)MachineIndex.SE03:
                         MachineFlagSet(GlobalVars.SE03Flag, model, model.Index);
                         break;
-                    case 20:
+                    case (int)MachineIndex.SE02:
                         MachineFlagSet(GlobalVars.SE02Flag, model, model.Index);
                         break;
-                    case 21:
+                    case (int)MachineIndex.SE01:
                         MachineFlagSet(GlobalVars.SE01Flag, model, model.Index);
                         break;
                     //研发一楼车间
-                    case 22:
+                    case (int)MachineIndex.DF20:
                         MachineFlagSet(GlobalVars.DF20Flag, model, model.Index);
                         break;
-                    case 23:
+                    case (int)MachineIndex.DF18:
                         MachineFlagSet(GlobalVars.DF18Flag, model, model.Index);
                         break;
-                    case 24:
+                    case (int)MachineIndex.DE12:
                         MachineFlagSet(GlobalVars.DE12Flag, model, model.Index);
                         break;
-                    case 25:
+                    case (int)MachineIndex.DE11:
                         MachineFlagSet(GlobalVars.DE11Flag, model, model.Index);
                         break;
-                    case 26:
+                    case (int)MachineIndex.SM02:
                         MachineFlagSet(GlobalVars.SM02Flag, model, model.Index);
                         break;
-                    case 27:
+                    case (int)MachineIndex.SM01:
                         MachineFlagSet(GlobalVars.SM01Flag, model, model.Index);
                         break;
-                    case 28:
+                    case (int)MachineIndex.SR02:
                         MachineFlagSet(GlobalVars.SR02Flag, model, model.Index);
                         break;
-                    case 29:
+                    case (int)MachineIndex.SR01:
                         MachineFlagSet(GlobalVars.SR01Flag, model, model.Index);
                         break;
-                    case 30:
+                    case (int)MachineIndex.DF21:
                         MachineFlagSet(GlobalVars.DF21Flag, model, model.Index);
                         break;
                 }
