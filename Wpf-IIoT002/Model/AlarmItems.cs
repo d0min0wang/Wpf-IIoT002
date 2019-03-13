@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
+
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Wpf_IIoT002
 {
@@ -15,113 +13,93 @@ namespace Wpf_IIoT002
 
         public AlarmItems()
         {
-            //第一排
-            //DF07 Index:1
-            AddDFAlarmItems("制造车间", "大机#07", "#01", 1);
-            //DF06 Index:2
-            AddDFAlarmItems("制造车间", "大机#06", "#01", 2);
-            //SF08 Index:3
-            AddSFAlarmItems("制造车间", "小机#08", "#01", 3);
-            //SF07 Index:4
-            //_machineFlagDict.Add("制造车间小机#07.#01.状态.机器运行标志", 301);
-            AddSFAlarmItems("制造车间", "小机#07", "#01", 4);
-            //SF06 Index:5
-            AddSFAlarmItems("制造车间", "小机#06", "#01", 5);
-            //SF05 Index:6
-            AddSFAlarmItems("制造车间", "小机#05", "#01", 6);
-            //SF04 Index:7
-            AddSFAlarmItems("制造车间", "小机#04", "#01", 7);
-            //SF03 Index:8
-            AddSFAlarmItems("制造车间", "小机#03", "#01", 8);
-            //SF02 Index:9
-            AddSFAlarmItems("制造车间", "小机#02", "#01", 9);
-            //SF01 Index:10
-            AddSFAlarmItems("制造车间", "小机#01", "#01", 10);
-            //DF05 Index:11
-            AddDFAlarmItems("制造车间", "大机#05", "#01", 11);
-            //DF04 Index:12
-            AddDFAlarmItems("制造车间", "大机#04", "#01", 12);
-            //DF03 Index:13
-            AddDFAlarmItems("制造车间", "大机#03", "#01", 13);
-            //DF02 Index:14
-            AddDFAlarmItems("制造车间", "大机#02", "#01", 14);
-            //DF01 Index:15
-            AddDFAlarmItems("制造车间", "大机#01", "#01", 15);
-
-            //第二排
-            //DF17 Index:16
-            AddDFAlarmItems("制造车间", "大机#17", "#01", 16);
-            //DF16 Index:17
-            AddDFAlarmItems("制造车间", "大机#16", "#01", 17);
-            //DF15 Index:18
-            AddDFAlarmItems("制造车间", "大机#15", "#01", 18);
-            //SF12 Index:19
-            AddSFAlarmItems("制造车间", "小机#12", "#01", 19);
-            //SF11 Index:20
-            AddSFAlarmItems("制造车间", "小机#11", "#01", 20);
-            //SF10 Index:21
-            AddSFAlarmItems("制造车间", "小机#10", "#01", 21);
-            //SF09 Index:22
-            AddSFAlarmItems("制造车间", "小机#09", "#01", 22);
-            //DF14 Index:23
-            AddDFAlarmItems("制造车间", "大机#14", "#01", 23);
-            //DF13 Index:24
-            AddDFAlarmItems("制造车间", "大机#13", "#01", 24);
-            //DF12 Index:25
-            AddDFAlarmItems("制造车间", "大机#12", "#01", 25);
-            //DF11 Index:26
-            AddDFAlarmItems("制造车间", "大机#11", "#01", 26);
-            //DF10 Index:27
-            AddDFAlarmItems("制造车间", "大机#10", "#01", 27);
-            //DF09 Index:28
-            AddDFAlarmItems("制造车间", "大机#09", "#01", 28);
-            //DF08 Index:29
-            AddDFAlarmItems("制造车间", "大机#08", "#01", 29);
-
-            //第三排
-            //SF13 Index:30
-            AddSFAlarmItems("制造车间", "小机#13", "#01", 30);
-            //SF14 Index:31
-            AddSFAlarmItems("制造车间", "小机#14", "#01", 31);
-            //DF19 Index:32
-            //AddDFAlarmItems("制造车间", "大机#19", "#01", 31);
-            //SE13 Index:33
-            AddSFAlarmItems("制造车间", "手吹小机#13", "#01", 33);
+            //研发楼二楼车间
+            //DY04 Index:0
+            AddAlarmItems("研发楼二楼车间", "S7-200", "DY","04", (int)MachineIndex.DY04);
+            //DY03 Index:1
+            AddAlarmItems("研发楼二楼车间", "S7-200", "DY","03", (int)MachineIndex.DY03);
+            //DY02 Index:2
+            AddAlarmItems("研发楼二楼车间", "S7-200", "DY","02", (int)MachineIndex.DY02);
+            //DY01 Index:3
+            AddAlarmItems("研发楼二楼车间", "S7-200", "DY","01", (int)MachineIndex.DY01);
+            //SG01 Index:4
+            AddAlarmItems("研发楼二楼车间", "S7-200", "SG","01", (int)MachineIndex.SG01);
+            //SG02 Index:5
+            AddAlarmItems("研发楼二楼车间", "S7-200", "SG","02", (int)MachineIndex.SG02);
+            //SG03 Index:6
+            AddAlarmItems("研发楼二楼车间", "S7-200", "SG","03", (int)MachineIndex.SG03);
+            //SE14 Index:7
+            AddAlarmItems("研发楼二楼车间", "S7-200", "SE","14", (int)MachineIndex.SE14);
+            //SE12 Index:8
+            AddAlarmItems("研发楼二楼车间", "S7-200", "SE","12", (int)MachineIndex.SE12);
+            //SE11 Index:9
+            AddAlarmItems("研发楼二楼车间", "S7-200", "SE","11", (int)MachineIndex.SE11);
+            //SY01 Index:10
+            AddAlarmItems("研发楼二楼车间", "S7-200", "SY","01", (int)MachineIndex.SY01);
+            //研发二楼洁净车间
+            //DE03 Index:11
+            AddAlarmItems("研发楼二楼洁净车间", "S7-1200-2", "DE","03", (int)MachineIndex.DE03);
+            //DE02 Index:12
+            AddAlarmItems("研发楼二楼洁净车间", "S7-1200-2", "DE","02", (int)MachineIndex.DE02);
+            //DE01 Index:13
+            AddAlarmItems("研发楼二楼洁净车间", "S7-1200-2", "DE","01", (int)MachineIndex.DE01);
+            //SE08 Index:14
+            AddAlarmItems("研发楼二楼洁净车间", "S7-200", "SE","08", (int)MachineIndex.SE08);
+            //SE07 Index:15
+            AddAlarmItems("研发楼二楼洁净车间", "S7-200", "SE","07", (int)MachineIndex.SE07);
+            //SE06 Index:16
+            AddAlarmItems("研发楼二楼洁净车间", "S7-200", "SE","06", (int)MachineIndex.SE06);
+            //SE05 Index:17
+            AddAlarmItems("研发楼二楼洁净车间", "S7-200", "SE","05", (int)MachineIndex.SE05);
+            //SE04 Index:18
+            AddAlarmItems("研发楼二楼洁净车间", "S7-200", "SE","04", (int)MachineIndex.SE04);
+            //SE03 Index:19
+            AddAlarmItems("研发楼二楼洁净车间", "S7-200", "SE","03", (int)MachineIndex.SE03);
+            //SE02 Index:20
+            AddAlarmItems("研发楼二楼洁净车间", "S7-200", "SE","02", (int)MachineIndex.SE02);
+            //SE01 Index:21
+            AddAlarmItems("研发楼二楼洁净车间", "S7-200", "SE","01", (int)MachineIndex.SE01);
+            //研发一楼车间
+            //DF20 Index:22
+            AddAlarmItems("研发楼一楼车间", "S7-1200-2-DF", "DF","20", (int)MachineIndex.DF20);
+            //DF18 Index:23
+            AddAlarmItems("研发楼一楼车间", "S7-200", "DF","18", (int)MachineIndex.DF18);
+            //DE12 Index:24
+            AddAlarmItems("研发楼一楼车间", "S7-200", "DE","12", (int)MachineIndex.DE12);
+            //DE11 Index:25
+            AddAlarmItems("研发楼一楼车间", "S7-200", "DE","11", (int)MachineIndex.DE11);
+            //SM02 Index:26
+            AddAlarmItems("研发楼一楼车间", "S7-200", "SM","02", (int)MachineIndex.SM02);
+            //SM01 Index:27
+            AddAlarmItems("研发楼一楼车间", "S7-200", "SM","01", (int)MachineIndex.SM01);
+            //SR02 Index:28
+            AddAlarmItems("研发楼一楼车间", "S7-1200", "SR","02", (int)MachineIndex.SR02);
+            //SR01 Index:29
+            AddAlarmItems("研发楼一楼车间", "S7-1200", "SR","01", (int)MachineIndex.SR01);
+            ////DM01 Index:30
+            //AddAlarmItems("研发楼一楼车间", "S7-1200-2", "DM01", (int)MachineIndex.DM01);
+            //DF21 Index:31
+            AddAlarmItems("研发楼一楼车间", "S7-1200-2-DF", "DF","21", (int)MachineIndex.DF21);
         }
 
 
-        private void AddDFAlarmItems(string workshop, string machineNo, string plcNo, int index)
+        private void AddAlarmItems(string workshop,string plcType, string machineType, string machineNo,  int index)
         {
-            //遍历Enum获取Descriprion
-            Type type = typeof(AlarmInfoOfDF);
-
-            foreach (FieldInfo x in type.GetFields(BindingFlags.Public | BindingFlags.Static))
+            Type type = null;
+            //遍历Enum获取并添加所有报警信息
+            switch (machineType)
             {
-                string _handleName;
-                string _description = string.Empty;
-                object[] array = x.GetCustomAttributes(typeof(DescriptionAttribute), false);
-                if (array.Length > 0)
-                {
-                    _description = ((DescriptionAttribute)array[0]).Description;
-                }
-                else
-                {
-                    _description = ""; //none description,set empty
-                }
-                _handleName = workshop + machineNo + "." + plcNo + ".报警信息." + _description;
-                _alarmFlagDict.Add(_handleName, index * 10000 + (int)x.GetValue(null));
-                //初始化报警信息List
-                AlarmMessage alarmMessage = new AlarmMessage();
-                alarmMessage.MachineNo = machineNo;
-                alarmMessage.Index = index * 10000 + (int)x.GetValue(null);
-                alarmMessage.AlarmMessages = _description;
-                GlobalVars.alarmMessages.Add(alarmMessage);
+                case "DF":
+                    type = typeof(AlarmInfoOfDF);
+                    break;
+                case "SF":
+                    type = typeof(AlarmInfoOfSF);
+                    break;
+                case "SE":
+                    type = typeof(AlarmInfoOfSE);
+                    break;
             }
-        }
 
-        private void AddSFAlarmItems(string workshop, string machineNo, string plcNo, int index)
-        {
-            Type type = typeof(AlarmInfoOfSF);
 
             foreach (FieldInfo x in type.GetFields(BindingFlags.Public | BindingFlags.Static))
             {
@@ -131,13 +109,12 @@ namespace Wpf_IIoT002
                 if (array.Length > 0)
                 {
                     _description = ((DescriptionAttribute)array[0]).Description;
-                    //Console.WriteLine(description);
                 }
                 else
                 {
                     _description = ""; //none description,set empty
                 }
-                _handleName = workshop + machineNo + "." + plcNo + ".报警信息." + _description;
+                _handleName = workshop +machineType+ machineNo + "." + ".报警信息." + _description;
                 _alarmFlagDict.Add(_handleName, index * 10000 + (int)x.GetValue(null));
                 //初始化报警信息List
                 AlarmMessage alarmMessage = new AlarmMessage();
@@ -186,25 +163,6 @@ namespace Wpf_IIoT002
             // TODO: 如果在以上内容中替代了终结器，则取消注释以下行。
             // GC.SuppressFinalize(this);
         }
-        #endregion
-
-        #region 遍历enum并获取Description
-        //Type type = typeof(AlarmInfoOfDF);
-
-        //    foreach (FieldInfo x in type.GetFields(BindingFlags.Public | BindingFlags.Static))
-        //    {
-        //        string description = string.Empty;
-        //object[] array = x.GetCustomAttributes(typeof(DescriptionAttribute), false);
-        //        if (array.Length > 0)
-        //        {
-        //            description = ((DescriptionAttribute) array[0]).Description;
-        //            Console.WriteLine(description);
-        //        }
-        //        else
-        //        {
-        //            description = ""; //none description,set empty
-        //        }
-        //    }
         #endregion
     }
 }

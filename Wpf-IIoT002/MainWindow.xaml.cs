@@ -43,6 +43,17 @@ namespace Wpf_IIoT002
         }
 
         /// <summary>
+        /// Windows关闭时先释放OPC连接
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Window_Closing(object sender, CancelEventArgs e)
+        {
+            cancelTokenSource.Cancel();
+            opcClient.Disconnect();
+        }
+
+        /// <summary>
         /// 初始化数据绑定函数
         /// </summary>
         private void BindingInit()
@@ -881,14 +892,6 @@ namespace Wpf_IIoT002
             GlobalVars.SE12Flag.Toolstip = str;
         }
 
-        #endregion
-
-        private void Window_Closing(object sender, CancelEventArgs e)
-        {
-            cancelTokenSource.Cancel();
-            opcClient.Disconnect();
-        }
-
-        
+        #endregion 
     }
 }
