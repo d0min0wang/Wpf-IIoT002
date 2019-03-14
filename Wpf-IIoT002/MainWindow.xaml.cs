@@ -855,7 +855,19 @@ namespace Wpf_IIoT002
 
         private void ImageDM01_MouseEnter(object sender, MouseEventArgs e)
         {
+            string str = "机器参数：\n"
+                    + "烤模时间设定：" + GlobalVars.DM01Flag.FlareMoldTimeSetting.ToString() + "\n"
+                    + "浸料时间设定：" + GlobalVars.DM01Flag.DipingMaterialTimeSetting.ToString() + "\n"
+                    + "烤料时间设定：" + GlobalVars.DM01Flag.FlareMaterialTimeSetting.ToString() + "\n"
+                    + "冷却时间设定：" + GlobalVars.DM01Flag.CoolingTimeSetting.ToString() + "\n"
+                    + "刷油时间设定：" + GlobalVars.DM01Flag.BrushOilTimeSetting.ToString() + "\n";
+            //if (GlobalVars.DM01Flag.getAlarm() == 1)
+            //{
+            //    str += "报警信息：" + "\n";
+            //    str += GetAlarmMessages(MachineIndex.DM01);
 
+            //}
+            GlobalVars.DM01Flag.Toolstip = str;
         }
 
         private void ImageDF21_MouseEnter(object sender, MouseEventArgs e)
