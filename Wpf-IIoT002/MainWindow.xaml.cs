@@ -93,6 +93,7 @@ namespace Wpf_IIoT002
             SE12Status.DataContext = GlobalVars.SE12Flag;
             SR02Status.DataContext = GlobalVars.SR02Flag;
             SR01Status.DataContext = GlobalVars.SR01Flag;
+            DM01Status.DataContext = GlobalVars.DM01Flag;
             DF21Status.DataContext = GlobalVars.DF21Flag;
 
             //机器状态
@@ -240,7 +241,7 @@ namespace Wpf_IIoT002
                         MachineFlagSet(GlobalVars.SR01Flag, model, model.Index);
                         break;
                     case (int)MachineIndex.DM01:
-                        //MachineFlagSet(GlobalVars.SR01Flag, model, model.Index);
+                        MachineFlagSet(GlobalVars.DM01Flag, model, model.Index);
                         break;
                     case (int)MachineIndex.DF21:
                         MachineFlagSet(GlobalVars.DF21Flag, model, model.Index);

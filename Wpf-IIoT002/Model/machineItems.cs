@@ -76,8 +76,8 @@ namespace Wpf_IIoT002
             AddStatusItems("研发楼一楼车间", "S7-1200", "SR02", (int)MachineIndex.SR02);
             //SR01 Index:29
             AddStatusItems("研发楼一楼车间", "S7-1200", "SR01", (int)MachineIndex.SR01);
-            ////DM01 Index:30
-            //AddStatusItems("研发楼一楼车间", "S7-1200-2", "DM01", (int)MachineIndex.DM01);
+            //DM01 Index:30
+            AddStatusItems("研发楼一楼车间", "S7-1200", "DM01", (int)MachineIndex.DM01);
             //DF21 Index:31
             AddStatusItems("研发楼一楼车间", "S7-1200-2-DF", "DF21", (int)MachineIndex.DF21);
         }

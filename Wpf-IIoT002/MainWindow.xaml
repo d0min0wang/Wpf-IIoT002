@@ -119,7 +119,7 @@
             <TextBlock Name="mark21" Text="研发楼二楼车间" FontSize="16" Foreground="DarkGray"  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Top" TextAlignment="Left" Margin="20,5,25,0"/>
             <Rectangle Grid.Row="0" Grid.RowSpan="3" Grid.Column="11" Grid.ColumnSpan="8" Stroke="DarkGray" StrokeThickness="2" Margin="0,3" RadiusX="5" RadiusY="5"></Rectangle>
             <TextBlock Name="mark22" Text="研发楼二楼洁净车间" FontSize="16" Foreground="DarkGray"  Grid.Row="0" Grid.Column="11" Grid.ColumnSpan="3" VerticalAlignment="Top" TextAlignment="Left" Margin="20,5,25,0"/>
-            <Rectangle Grid.Row="4" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="10" Stroke="DarkGray" StrokeThickness="2" Margin="0,0" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Grid.Row="4" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="10" Stroke="DarkGray" StrokeThickness="2" Margin="0,0,0,10" RadiusX="5" RadiusY="5"></Rectangle>
             <TextBlock Name="mark11" Text="研发楼一楼车间" FontSize="16" Foreground="DarkGray"  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Top" TextAlignment="Left" Margin="20,5,25,0"/>
             <!--DY04界面开始代码段-->
             <Grid Grid.Row="1" Grid.Column="3" Margin="0,0,0,35" Name="DG01Status">
@@ -1443,7 +1443,7 @@
             </Grid>
             <!--SE01界面完--> 
             <!--DF18界面开始代码段-->
-            <Grid Grid.Row="5" Grid.Column="0" Margin="0,35,0,0" Name="DF18Status">
+            <Grid Grid.Row="5" Grid.Column="0" Margin="0,15,0,20" Name="DF18Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
@@ -1503,7 +1503,7 @@
             </Grid>
             <!--DF18界面完-->
             <!--DE12界面开始代码段-->
-            <Grid Grid.Row="5" Grid.Column="1" Margin="0,35,0,0" Name="DE12Status">
+            <Grid Grid.Row="5" Grid.Column="1" Margin="0,15,0,20" Name="DE12Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
@@ -1563,7 +1563,7 @@
             </Grid>
             <!--DE12界面完-->
             <!--DE11界面开始代码段-->
-            <Grid Grid.Row="5" Grid.Column="2" Margin="0,35,0,0" Name="DE11Status">
+            <Grid Grid.Row="5" Grid.Column="2" Margin="0,15,0,20" Name="DE11Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
@@ -1623,7 +1623,7 @@
             </Grid>
             <!--DE11界面完-->
             <!--DF20界面开始代码段-->
-            <Grid Grid.Row="5" Grid.Column="3" Margin="0,35,0,0" Name="DF20Status">
+            <Grid Grid.Row="5" Grid.Column="3" Margin="0,15,0,20" Name="DF20Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
@@ -1683,7 +1683,7 @@
             </Grid>
             <!--DF20界面完-->
             <!--SM02界面开始代码段-->
-            <Grid Grid.Row="5" Grid.Column="4" Margin="0,35,0,0" Name="SM02Status">
+            <Grid Grid.Row="5" Grid.Column="4" Margin="0,15,0,20" Name="SM02Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
@@ -1743,7 +1743,7 @@
             </Grid>
             <!--SM02界面完-->
             <!--SM01界面开始代码段-->
-            <Grid Grid.Row="5" Grid.Column="5" Margin="0,35,0,0" Name="SM01Status">
+            <Grid Grid.Row="5" Grid.Column="5" Margin="0,15,0,20" Name="SM01Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
@@ -1804,7 +1804,7 @@
             <!--SM01界面完-->
             
             <!--SR02界面开始代码段-->
-            <Grid Grid.Row="5" Grid.Column="6" Margin="0,35,0,0" Name="SR02Status">
+            <Grid Grid.Row="5" Grid.Column="6" Margin="0,15,0,20" Name="SR02Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
@@ -1864,7 +1864,7 @@
             </Grid>
             <!--SR02界面完-->
             <!--SR01界面开始代码段-->
-            <Grid Grid.Row="5" Grid.Column="7" Margin="0,35,0,0" Name="SR01Status">
+            <Grid Grid.Row="5" Grid.Column="7" Margin="0,15,0,20" Name="SR01Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
@@ -1924,7 +1924,7 @@
             </Grid>
             <!--SR01界面完-->
             <!--DM01界面开始代码段-->
-            <Grid Grid.Row="5" Grid.Column="8" Margin="0,35,0,0" Name="DM01Status">
+            <Grid Grid.Row="5" Grid.Column="8" Margin="0,15,0,20" Name="DM01Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
@@ -1984,7 +1984,7 @@
             </Grid>
             <!--DM01界面完-->
             <!--DF21界面开始代码段-->
-            <Grid Grid.Row="5" Grid.Column="9" Margin="0,35,0,0" Name="DF21Status">
+            <Grid Grid.Row="5" Grid.Column="9" Margin="0,15,0,20" Name="DF21Status">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*"></RowDefinition>
                     <RowDefinition Height="6*"></RowDefinition>
@@ -2045,7 +2045,7 @@
             <!--DF21界面完-->
             <TextBlock Name="labelServerStatus" Text="{Binding ServerStatusString}" FontSize="15" Foreground="DarkGray"  Grid.Row="5" Grid.Column="10" Grid.ColumnSpan="2" VerticalAlignment="Bottom" TextAlignment="Right" Margin="0,0,10,10"/>
             <TextBlock Name="label184" Text="{Binding GuiLoadedTime}" FontSize="11" Foreground="DarkGray"  Grid.Row="4" Grid.Column="10" Grid.ColumnSpan="2" VerticalAlignment="Top" TextAlignment="Right" Margin="0,10,10,0"/>
-            <DataGrid Name="dataGridViewAlarmMessage" Grid.Row="4" Grid.RowSpan="2" Grid.Column="12" Grid.ColumnSpan="7" BorderThickness="1" Margin="10" 
+            <DataGrid Name="dataGridViewAlarmMessage" Grid.Row="4" Grid.RowSpan="2" Grid.Column="12" Grid.ColumnSpan="7" BorderThickness="1" Margin="0,15,0,15" 
                       FontSize="14" AutoGenerateColumns="False" GridLinesVisibility="None" BorderBrush="DarkGray" IsReadOnly="True" RowHeaderWidth="0">
                 <DataGrid.Background>
                     <SolidColorBrush Color="#FFF0F0F0" Opacity="0"/>

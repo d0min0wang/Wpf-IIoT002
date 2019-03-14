@@ -38,6 +38,7 @@ namespace Wpf_IIoT002
         public static machineFlag SM01Flag = new machineFlag();
         public static machineFlag SR02Flag = new machineFlag();
         public static machineFlag SR01Flag = new machineFlag();
+        public static machineFlag DM01Flag = new machineFlag();
         public static machineFlag DF21Flag = new machineFlag();
 
         //建立全局静态变量保存Banner信息
