@@ -15,13 +15,13 @@ namespace Wpf_IIoT002
         {
             //研发楼二楼车间
             //DY04 Index:0
-            AddStatusItems("研发楼二楼车间", "S7-200", "DY04", (int)MachineIndex.DY04);
+            AddStatusItems("研发楼二楼车间", "S7-1200-2", "DY04", (int)MachineIndex.DY04);
             //DY03 Index:1
-            AddStatusItems("研发楼二楼车间", "S7-200", "DY03", (int)MachineIndex.DY03);
+            AddStatusItems("研发楼二楼车间", "S7-1200-2", "DY03", (int)MachineIndex.DY03);
             //DY02 Index:2
-            AddStatusItems("研发楼二楼车间", "S7-200", "DY02", (int)MachineIndex.DY02);
+            AddStatusItems("研发楼二楼车间", "S7-1200-2", "DY02", (int)MachineIndex.DY02);
             //DY01 Index:3
-            AddStatusItems("研发楼二楼车间", "S7-200", "DY01", (int)MachineIndex.DY01);
+            AddStatusItems("研发楼二楼车间", "S7-1200-2", "DY01", (int)MachineIndex.DY01);
             //SG01 Index:4
             AddStatusItems("研发楼二楼车间", "S7-200", "SG01", (int)MachineIndex.SG01);
             //SG02 Index:5
@@ -75,7 +75,7 @@ namespace Wpf_IIoT002
             //SR02 Index:28
             AddStatusItems("研发楼一楼车间", "S7-1200", "SR02", (int)MachineIndex.SR02);
             //SR01 Index:29
-            AddStatusItems("研发楼一楼车间", "S7-1200", "SR01", (int)MachineIndex.SR01);
+            AddStatusItems("研发楼一楼车间", "S7-1200-SR01", "SR01", (int)MachineIndex.SR01);
             //DM01 Index:30
             AddStatusItems("研发楼一楼车间", "S7-1200", "DM01", (int)MachineIndex.DM01);
             //DF21 Index:31
@@ -93,6 +93,9 @@ namespace Wpf_IIoT002
                     break;
                 case "S7-1200":
                     type = typeof(S71200StatusInfo);
+                    break;
+                case "S7-1200-SR01":
+                    type = typeof(S71200StatusInfoSR01);
                     break;
                 case "S7-1200-1":
                     type = typeof(S71200StatusInfoFor1);
